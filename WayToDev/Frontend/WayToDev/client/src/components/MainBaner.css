@@ -1,0 +1,32 @@
+.mainBaner{
+    width:100vw;
+    height:100vh;
+    background:url("https://images.wallpaperscraft.ru/image/single/zvezdnoe_nebo_zvezdy_blesk_131522_1920x1080.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index:0;
+}
+
+.mainBaner > .container{
+    max-width:1200px;
+    padding:20px;
+    margin:0 auto;
+    display: flex;
+    justify-content:space-between;
+}
+
+.banerLeft{
+    color: #fff;
+    width:50%;
+    display:flex;
+    flex-direction:column;
+}
+
+.banerButton{
+    width:fit-content;
+    padding:5px 30px;
+}
+
+/* .globe{
+    width:50vw;
+} */

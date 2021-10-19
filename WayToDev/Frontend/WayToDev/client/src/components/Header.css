@@ -1,0 +1,31 @@
+.header {
+    background-color: #11324D;
+}
+
+.header-container{
+    max-width:1200px;
+    padding:20px;
+    margin:0 auto;
+    display: flex;
+    justify-content:space-between;
+}
+  
+.logo a{
+    cursor: pointer;
+    color: #fff;
+    text-decoration:none;
+    font-size:20px;
+}
+
+.menu{
+    color: #fff;
+    width:30%;
+    display:flex;   
+    justify-content: space-between;
+    cursor: pointer;   
+    align-items:center;
+}
+
+.menu nav{
+    text-transform: uppercase;
+}
