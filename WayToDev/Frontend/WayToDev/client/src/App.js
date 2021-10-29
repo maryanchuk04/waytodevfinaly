@@ -5,7 +5,7 @@ import Header from './components/Header.js';
 import MainBaner from './components/MainBaner.js';
 import MainCourses from './components/MainCourses.js';
 import NewPosts from './components/NewPosts.js';
-
+import Social from './components/Social';
 function App() {
   return (
     <div className="app">
@@ -13,6 +13,7 @@ function App() {
       <MainBaner/>
       <MainCourses/>
       <NewPosts/>
+      <Social/>
     </div>
   );
 }

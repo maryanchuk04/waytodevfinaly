@@ -1,34 +1,40 @@
-.newPosts{
-    background-color:#F6F6F6;
+.newPosts {
+	background-color: #f6f6f6;
 }
 
-.newPosts .container{
-    max-width:1200px;
-    margin:0 auto;
-    width:100%;
-    padding: 0 20px;
+.newPosts h1 {
+	color: #333;
+	font-size: 36px;
+	font-weight: 700;
+	padding: 50px 0 30px;
 }
 
-.newPosts h1{
-    color: #333;
-    font-size:36px;
-    font-weight:700;
+.newPosts section {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.newPosts section{
-    display:flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
+.newPosts section article {
+	border-radius: 5px;
+	overflow: hidden;
+	width: 31%;
+	background-color: #fff;
+	margin-bottom: 30px;
 }
 
-.newPosts section article{
-    border-radius:5px;
-    overflow:hidden;
-    width:30%;
+.newPosts section article img {
+	width: 100%;
+	height: 125px;
+	object-fit: cover;
 }
 
-.newPosts section article img{
-    width:100%;
-    height:125px;
-    object-fit: cover;
+.postInfo {
+	padding: 10px 20px;
+}
+
+.postInfo h3 {
+	font-size: 17px;
+	color: #333;
+	font-weight: 400;
 }

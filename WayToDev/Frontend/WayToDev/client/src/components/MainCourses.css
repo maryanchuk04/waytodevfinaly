@@ -1,46 +1,46 @@
-
 .mainCourses {
-    background-color: #556B2F;
+	background-color: #696969;
 }
 
 .courses {
-    width: 100%;
+	width: 100%;
 }
 
 .courses_header {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
+	padding-top: 50px;
+	font-weight: 500;
 }
 
 .corses_title {
-    font-size: 30px;
-    color: #fff;
-    margin: 10px;
+	font-size: 30px;
+	color: #fff;
 }
 
 .corses_button {
-    border-radius: 10%;
-    height: 40px;
-    margin-left: 50px;
+	border-radius: 10%;
+	height: 40px;
+	margin-left: 50px;
 
-    padding: 12px 9px 12px;
-    background-color: #fff;
-    border: 0;
-    cursor: pointer;
-    color: #556B2F;
+	padding: 12px 9px 12px;
+	background-color: #fff;
+	border: 0;
+	cursor: pointer;
+	color: #556b2f;
 
-    line-height: 1.1;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
+	line-height: 1.1;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
 
-    transition: background .2s linear;
+	transition: background 0.2s linear;
 }
 
 .video {
-    display:flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-    margin-top: 20px;
-    padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	padding-bottom: 50px;
 }
