@@ -6,6 +6,8 @@ import MainBaner from './components/MainBaner.js';
 import MainCourses from './components/MainCourses.js';
 import NewPosts from './components/NewPosts.js';
 import Social from './components/Social';
+import Footer from './components/Footer';
+import AboutLang from './components/AboutLang';
 function App() {
   return (
     <div className="app">
@@ -14,6 +16,8 @@ function App() {
       <MainCourses/>
       <NewPosts/>
       <Social/>
+      <AboutLang/>
+      <Footer/>
     </div>
   );
 }

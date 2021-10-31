@@ -1,0 +1,86 @@
+.footer{
+    display: flex;
+    background-color: #5d5c61;
+    border-top: 5px solid #b1a296;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer .alloffooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer .logo{
+   display: inline-block;
+    text-align: center;
+}
+
+.footer .boxik .links{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer  .links .boxik >  .headlinks{
+    color: #fff;
+    margin-bottom: 23px;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+.footer  .links .boxik> .headlinks p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+.footer .links>.boxik{
+    display: inline-block;
+    padding-left: 30px;
+}
+.footer .links > .boxik ul{
+    list-style: none;
+}
+
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    color: darkred;
+}
+
+.links> .boxik ul a{
+    color: rgba(255,255,255,.5);
+    font-weight: 200;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 21px;
+    text-decoration: none;
+}
+.logo h1{
+    color: black;
+    text-align: center;
+    font-weight: 700;
+}
+.logo h2{
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    
+}
+.logo a{
+    text-decoration: none;
+}
+
+.footer .socialsbuttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.socialsbuttons a{
+    padding-left: 30px;
+    color: #f26651;
+    text-decoration: none;
+    size: 30px;
+    
+}
