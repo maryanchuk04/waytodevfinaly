@@ -8,24 +8,24 @@ function Social() {
                 <p>Join the community of programmers, learn a lot from the IT world and be aware of all the events!</p>
                 <div className = "social_links">
                     
-                        <div class="wrapper">
+                    <div class="wrapper">
                     <div class="button"  >
                         <div class="icon">
                         <a href = "https://www.facebook.com/ffrgd.ewexa" target = "_blank" rel="noreferrer"><i class="fab fa-facebook-f"></i></a>
                         </div>
-                        <a href = "https://www.facebook.com/ffrgd.ewexa" target = "_blank" rel="noreferrer"><span>Facebook</span></a>
+                        <a href = "https://www.facebook.com/ffrgd.ewexa" target = "_blank" rel="noreferrer"><span class="icon_btn">Facebook</span></a>
                     </div>
                     <div class="button">
                         <div class="icon">
-                        <a href = "https://www.instagram.com/_maryanchukm_/" target = "_blank " rel="noreferrer"> <i class="fab fa-twitter"></i></a>
+                        <a href = "https://twitter.com/?lang=uk" target = "_blank " rel="noreferrer"> <i class="fab fa-twitter"></i></a>
                         </div>
-                        <a href = "https://www.instagram.com/_maryanchukm_/" target = "_blank " rel="noreferrer"><span>Twitter</span></a> 
+                        <a href = "https://twitter.com/?lang=uk"target = "_blank " rel="noreferrer"><span>Twitter</span></a> 
                     </div>
                     <div class="button">
                         <div class="icon">
-                        <a href = "https://twitter.com/?lang=uk"t arget = "_blank"rel="noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href = "https://www.instagram.com/_maryanchukm_/" target = "_blank"rel="noreferrer"><i class="fab fa-instagram"></i></a>
                         </div>
-                        <a href = "https://twitter.com/?lang=uk"t arget = "_blank"rel="noreferrer"><span>Instagram</span></a>
+                        <a href = "https://www.instagram.com/_maryanchukm_/"  target = "_blank"rel="noreferrer"><span>Instagram</span></a>
                     </div>
                     <div class="button">
                         <div class="icon">
