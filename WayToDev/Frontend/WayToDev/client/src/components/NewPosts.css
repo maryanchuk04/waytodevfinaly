@@ -21,20 +21,40 @@
 	width: 31%;
 	background-color: #fff;
 	margin-bottom: 30px;
+	cursor: pointer;
 }
 
-.newPosts section article img {
+.newPosts section article:hover .postImg img {
+	transform: scale(1.1);
+}
+
+.newPosts section article:hover .postInfo h3 {
+	color: #e8622d;
+}
+
+.postImg {
 	width: 100%;
 	height: 125px;
+	overflow: hidden;
+}
+
+.postImg img {
+	width: 100%;
 	object-fit: cover;
+	transition: transform 0.4s linear;
 }
 
 .postInfo {
-	padding: 10px 20px;
+	padding: 20px 30px;
 }
 
 .postInfo h3 {
-	font-size: 17px;
+	font-size: 20px;
 	color: #333;
-	font-weight: 400;
+	font-weight: 500;
+}
+
+.postInfo p {
+	font-size: 18px;
+	color: #7e7e7e;
 }
