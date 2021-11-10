@@ -5,12 +5,12 @@ import axios from "axios";
 function NewPosts() {
 	const [posts, setPosts] = useState([]);
 
-	// useEffect(() => {
+	useEffect(() => {
 	axios.get("https://waytodev.azurewebsites.net/post").then((result) => {
 		console.log(result);
-		setPosts(result);
+		setPosts(result.data);
 	});
-	// }, []);
+	}, []);
 
 	return (
 		<div className="newPosts">

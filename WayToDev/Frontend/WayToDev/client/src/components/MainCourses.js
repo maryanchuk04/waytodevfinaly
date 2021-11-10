@@ -90,9 +90,7 @@ function MainCourses() {
 				<div className="container">
 					<div className="courses_header">
 						<div className="corses_title">Video courses</div>
-						<button className="corses_button">
-							All courses [90]
-						</button>
+						<a href="/" className="courses_btn csbtn">All courses</a>
 					</div>
 
 					<div class="video">
