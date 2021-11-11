@@ -6,10 +6,9 @@ function NewPosts() {
 	const [posts, setPosts] = useState([]);
 
 	useEffect(() => {
-	axios.get("https://waytodev.azurewebsites.net/post").then((result) => {
-		console.log(result);
-		setPosts(result.data);
-	});
+		axios.get("https://waytodev.azurewebsites.net/post").then((result) => {
+			setPosts(result.data);
+		});
 	}, []);
 
 	return (

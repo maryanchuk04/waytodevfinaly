@@ -9,8 +9,7 @@ function AboutLang() {
 					<img
 						src="https://i.ibb.co/3RVXdW7/0-02-05-b29e4502427b2086c7cb33c360e579acdb0b47569d8cfaf6bae2287a57aadb20-7ee29e28cab4ff8b.png"
 						alt="programming"
-						height="350px"
-					></img>
+						height="350px"></img>
 				</div>
 
 				<div class="text">
@@ -27,7 +26,9 @@ function AboutLang() {
 							to choose, we can help you ...
 						</p>
 					</div>
-					<a href="/" className="language_btn langbtn">READ MORE</a>
+					<a href="/" className="language_btn langbtn">
+						READ MORE
+					</a>
 				</div>
 			</div>
 		</div>
