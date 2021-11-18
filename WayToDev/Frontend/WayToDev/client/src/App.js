@@ -1,16 +1,16 @@
 import React from "react";
 // import { Counter } from './features/counter/Counter';
 import "./App.css";
-import Header from "./components/Header.js";
-import MainBaner from "./components/MainBaner.js";
-import MainCourses from "./components/MainCourses.js";
-import NewPosts from "./components/NewPosts.js";
-import Social from "./components/Social";
-import Footer from "./components/Footer";
-import AboutLang from "./components/AboutLang";
-import PostsPage from "./components/PostsPage.js";
-import CoursesPage from "./components/CoursesPage.js";
-import BooksPage from "./components/BooksPage.js";
+import Header from "./components/Shared/Header.js";
+import MainBaner from "./components/Main/MainBaner.js";
+import MainCourses from "./components/Main/MainCourses.js";
+import NewPosts from "./components/Main/NewPosts.js";
+import Social from "./components/Main/Social";
+import Footer from "./components/Shared/Footer.js";
+import AboutLang from "./components/Main/AboutLang";
+import PostsPage from "./components/Posts/PostsPage.js";
+import CoursesPage from "./components/Courses/CoursesPage.js";
+import BooksPage from "./components/Books/BooksPage.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	return (
