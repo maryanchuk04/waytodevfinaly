@@ -14,8 +14,9 @@ function AllCourses() {
 	}, []);
 	return (
 		<div class="allCourses">
-			<div className="mainCourses">
-			<div className="container">
+				<div className="container">
+			        <div className="mainCourses">
+		
 					<div clasName="corses">
 				<div classsName="courses_header">
 						<div className="corses_title">Programming courses</div>

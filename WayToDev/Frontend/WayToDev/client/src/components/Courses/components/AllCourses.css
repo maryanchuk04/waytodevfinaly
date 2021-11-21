@@ -59,7 +59,7 @@
 }
 
 .allCourses  .video_intro {
-	width: 90%;
+	width: 100%;
 	justify-self: center;
 }
 
@@ -69,9 +69,9 @@
 
 .allCourses  .video_intro iframe {
 	height: 300px;
-	width: 400px;
+	width: 100%;
 	border-radius: 20px;
-	margin: 10px 30px 10px -10px;
+	margin: 10px 0 10px 0;
 }
 
 .allCourses .video_intro iframe:hover {

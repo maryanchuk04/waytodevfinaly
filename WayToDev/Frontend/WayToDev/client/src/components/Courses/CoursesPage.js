@@ -6,7 +6,7 @@ import AllCourses from "./components/AllCourses.js";
 
 function CoursesPage() {
 	return (
-		<div>
+		<div >
 			<AllCourses />
 			<Footer />
 		</div>

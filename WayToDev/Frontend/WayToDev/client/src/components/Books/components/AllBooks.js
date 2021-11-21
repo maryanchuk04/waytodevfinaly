@@ -28,14 +28,7 @@ function AllBooks() {
 							(book, index) =>
 								index < 20 && (
 									<div class="book_intro" key={book._Id}>
-										<iframe
-											width="100%"
-											src={`https://www.youtube.com/embed/${
-												book.link.split("v=")[1]
-											}?showinfo=0&controls=1`}
-											title={book.name_book}
-											frameborder="0	"
-											allowfullscreen></iframe>
+										<img src="https://kniga.biz.ua/images/goods/big/26084.jpg"/>
 										<div class="book_text">
 											{book.title}
 										</div>
