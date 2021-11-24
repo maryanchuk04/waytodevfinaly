@@ -11,6 +11,7 @@ import AboutLang from "./components/Main/AboutLang";
 import PostsPage from "./components/Posts/PostsPage.js";
 import CoursesPage from "./components/Courses/CoursesPage.js";
 import BooksPage from "./components/Books/BooksPage.js";
+import Login from "./components/Login/Login.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	return (
@@ -37,6 +38,8 @@ function App() {
 					<Route path="/courses" element={<CoursesPage />} />
 
 					<Route path="/books" element={<BooksPage />} />
+
+					<Route path="/login" element={<Login />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
