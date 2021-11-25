@@ -15,12 +15,18 @@
 	flex-wrap: wrap;
 }
 
-.newPosts section article {
+.newPosts section > a {
+	width: 31%;
+	margin-bottom: 30px;
+	text-decoration: none;
+}
+
+.newPosts .container section article {
 	border-radius: 5px;
 	overflow: hidden;
-	width: 31%;
+	width: 100%;
 	background-color: #fff;
-	margin-bottom: 30px;
+
 	cursor: pointer;
 }
 

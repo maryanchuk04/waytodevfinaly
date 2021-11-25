@@ -9,6 +9,7 @@ import Social from "./components/Main/Social";
 import Footer from "./components/Shared/Footer.js";
 import AboutLang from "./components/Main/AboutLang";
 import PostsPage from "./components/Posts/PostsPage.js";
+import PostPage from "./components/Posts/PostPage.js";
 import CoursesPage from "./components/Courses/CoursesPage.js";
 import BooksPage from "./components/Books/BooksPage.js";
 import Login from "./components/Login/Login.js";
@@ -23,6 +24,7 @@ function App() {
 				<Routes>
 					<Route
 						path="/"
+						exact
 						element={
 							<React.Fragment>
 								<MainBaner />
@@ -35,9 +37,11 @@ function App() {
 						}
 					/>
 
-					<Route path="/posts" element={<PostsPage />} />
+					<Route path="/posts" exact element={<PostsPage />} />
 
-					<Route path="/courses" element={<CoursesPage />} />
+					<Route path="/posts/:id" exact element={<PostPage />} />
+
+					<Route path="/courses" exact element={<CoursesPage />} />
 
 					<Route path="/books" element={<BooksPage />} />
 
