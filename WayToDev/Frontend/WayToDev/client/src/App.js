@@ -13,6 +13,7 @@ import CoursesPage from "./components/Courses/CoursesPage.js";
 import BooksPage from "./components/Books/BooksPage.js";
 import Login from "./components/Login/Login.js";
 import Contacts from "./components/Contacts/Contacts.js";
+import Languages from "./components/Languages/Languages.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	return (
@@ -43,6 +44,8 @@ function App() {
 					<Route path="/login" element={<Login />} />
 
 					<Route path ="/contacts" element= {<Contacts/>} />
+
+					<Route path="/languages" element = {<Languages/>}/>
 				</Routes>
 			</BrowserRouter>
 		</div>
