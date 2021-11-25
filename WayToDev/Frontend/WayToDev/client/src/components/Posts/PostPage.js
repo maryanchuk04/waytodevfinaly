@@ -12,7 +12,7 @@ function PostPage() {
 			.get(`https://waytodev.azurewebsites.net/post/id/${id}`)
 			.then((result) => {
 				console.log(result);
-				setPostInfo(result.data);
+				result.data && setPostInfo(result.data);
 			});
 	}, []);
 
