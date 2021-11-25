@@ -19,7 +19,7 @@ function AllBooks() {
 			<div className="container">
 					<div clasName="books">
 				<div classsName="books_header">
-						<div className="books_title">Programming books</div>
+						<div className="books_title"><h1>Programming books</h1></div>
 						<a href="/" className="books_btn csbtn">All</a>
 					</div>
                         
