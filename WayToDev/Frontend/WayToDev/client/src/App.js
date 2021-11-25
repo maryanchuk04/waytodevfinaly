@@ -12,6 +12,7 @@ import PostsPage from "./components/Posts/PostsPage.js";
 import CoursesPage from "./components/Courses/CoursesPage.js";
 import BooksPage from "./components/Books/BooksPage.js";
 import Login from "./components/Login/Login.js";
+import Contacts from "./components/Contacts/Contacts.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	return (
@@ -40,6 +41,8 @@ function App() {
 					<Route path="/books" element={<BooksPage />} />
 
 					<Route path="/login" element={<Login />} />
+
+					<Route path ="/contacts" element= {<Contacts/>} />
 				</Routes>
 			</BrowserRouter>
 		</div>
