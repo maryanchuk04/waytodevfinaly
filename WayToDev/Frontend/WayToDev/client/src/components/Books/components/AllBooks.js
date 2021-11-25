@@ -19,7 +19,7 @@ function AllBooks() {
 			<div className="container">
 					<div clasName="books">
 				<div classsName="books_header">
-						<div className="books_title">Programming courses</div>
+						<div className="books_title"><h1>Programming books</h1></div>
 						<a href="/" className="books_btn csbtn">All</a>
 					</div>
                         
@@ -42,6 +42,7 @@ function AllBooks() {
 										  <div class="book_avtor">
 											Avtor:{book.avtor}
 										  </div>
+										   <a className="custom-btn btn-9" target="_blank" href={book.link}></a>
 									</div>
 									</div>
 							)
