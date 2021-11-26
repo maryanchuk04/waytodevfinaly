@@ -1,34 +1,41 @@
-.newPosts {
+.allPosts {
 	background-color: #f6f6f6;
 }
 
-.newPosts h1 {
+.allPosts h1 {
 	color: rgb(255, 0, 0);
 	font-size: 36px;
 	font-weight: 700;
 	padding: 50px 0 30px;
 }
 
-.newPosts section {
+.allPosts section {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
-.newPosts section article {
-	border-radius: 5px;
-	overflow: hidden;
+.allPosts section a {
+	text-decoration: none;
 	width: 31%;
-	background-color: #fff;
 	margin-bottom: 30px;
-	cursor: pointer;
 }
 
-.newPosts section article:hover .postImg img {
+.allPosts section article {
+	border-radius: 5px;
+	overflow: hidden;
+	width: 100%;
+	background-color: #fff;
+
+	cursor: pointer;
+	height: 100%;
+}
+
+.allPosts section article:hover .postImg img {
 	transform: scale(1.1);
 }
 
-.newPosts section article:hover .postInfo h3 {
+.allPosts section article:hover .postInfo h3 {
 	color: #e8622d;
 }
 

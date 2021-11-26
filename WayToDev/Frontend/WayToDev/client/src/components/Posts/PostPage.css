@@ -1,6 +1,6 @@
 .postPage {
 	background-color: #f6f6f6;
-	padding: 100px 0;
+	padding: 65px 0;
 }
 
 .postPage .container {
@@ -16,5 +16,57 @@
 }
 
 .postInfo {
-	padding: 20px 20px;
+	padding: 45px;
+	position: relative;
+}
+
+.postInfoLikes {
+	position: absolute;
+	bottom: 20px;
+	right: 40px;
+	cursor: pointer;
+	user-select: none;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90px;
+	height: 35px;
+}
+
+.postInfoLikes > .heart {
+	width: 100px;
+	height: 100px;
+	background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
+		no-repeat;
+	background-position: 0 0;
+	cursor: pointer;
+	transition: background-position 1s steps(28);
+	transition-duration: 0s;
+	transform: scale(0.7);
+}
+
+.postInfoLikes > .heart.is-active {
+	transition-duration: 1s;
+	background-position: -2800px 0;
+}
+
+.container.postInfoContainer {
+	padding: 25px 45px;
+	margin-top: 50px;
+}
+
+.postInfoContainer form input {
+	width: 94%;
+	border-radius: 5px;
+	border: 1px solid #007acc;
+	outline-style: none;
+	padding: 5px 20px;
+}
+
+.postInfoContainer form button {
+	background-color: transparent;
+	border: none;
+	margin-left: 30px;
+	cursor: pointer;
 }

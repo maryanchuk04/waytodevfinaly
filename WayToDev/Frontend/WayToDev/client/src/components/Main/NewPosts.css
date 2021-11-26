@@ -28,6 +28,7 @@
 	background-color: #fff;
 
 	cursor: pointer;
+	height: 100%;
 }
 
 .newPosts section article:hover .postImg img {
