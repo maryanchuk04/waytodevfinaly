@@ -17,6 +17,7 @@
 	font-size: 40px;
 	color: #000;
     font-weight: 700;
+	margin-top: 50px;
 }
 
 .allCourses  .courses_btn {
@@ -72,11 +73,15 @@
 	width: 100%;
 	border-radius: 20px;
 	margin: 10px 0 10px 0;
+	-webkit-transition: all 1.5s;
+    transition: all 1.5s;
 }
 
 .allCourses .video_intro iframe:hover {
 	transform: scale(1.1);
-	transition: transform .6s linear;
+	animation-direction:alternate;
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
 }
 
 
@@ -97,3 +102,47 @@
 	margin-top: 0;
 	margin-bottom: 30px;
 }
+
+.slider-slider {
+    padding: 0 110px;
+}
+
+.slider-arrow:focus {
+    outline: 0;
+}
+
+.slider-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    border: 0;
+    background: none;
+
+    display: block;
+    font-size: 0;
+    color: transparent;
+}
+
+.slider-arrow:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border-top: 2px solid rgb(0, 0, 0);
+    border-left: 2px solid rgb(0, 0, 0);
+}
+
+.slider-prev {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.slider-next {
+    right: 0;
+    transform: rotate(135deg);
+}
+

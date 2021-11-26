@@ -8,12 +8,14 @@ function Header() {
                 <div class="logo">
                     <a href="/"> WayToDev </a>
                 </div>
-                <div class="menu">
-                    <nav>IT Articles</nav>
-                    <nav>Courses</nav>
-                    <nav>Books</nav>
-                    <nav>Contacts</nav>
-                </div>
+                <nav class="stroke">
+                    <ul>
+                      <li><a href="#">IT Articles</a></li>
+                      <li><a href="#">Courses</a></li>
+                      <li><a href="#">Books</a></li>
+                      <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
             </div>
         </header> 
     )
