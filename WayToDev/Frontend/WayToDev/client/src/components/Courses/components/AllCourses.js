@@ -18,11 +18,11 @@ function AllCourses() {
 			        <div className="mainCourses">
 		
 					<div clasName="corses">
-				<div classsName="courses_header">
+					<div classsName="courses_header">
 						<div className="corses_title">Programming courses</div>
 						<a href="/" className="courses_btn csbtn">All</a>
 					</div>
-
+					<div class="slider"></div>
 					<div class="video">
 						{courses.map(
 							(course, index) =>
@@ -43,7 +43,7 @@ function AllCourses() {
 											{course.avtor}
 										</div>
 									</div>
-							)
+								)
 						)}
 					</div>
 				</div>

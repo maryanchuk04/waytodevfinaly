@@ -1,0 +1,83 @@
+.mainCourses {
+	background-color: rgb(211, 209, 209);
+}
+
+.courses {
+	width: 100%;
+}
+
+.courses_header {
+	display: flex;
+	align-items: center;
+	padding-top: 50px;
+	font-weight: 500;
+}
+
+.corses_title {
+	font-size: 30px;
+	color: rgb(0, 0, 0);
+}
+
+.courses_header a {
+	text-decoration: none;
+}
+
+
+.courses_btn  {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.7rem 2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	backface-visibility: hidden;
+	border: 0.3rem solid transparent;
+	border-radius: 3rem;
+	margin-left: 30px;
+}
+  
+.csbtn {
+	border-color: rgb(0, 0, 0);
+	transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+  
+.csbtn:hover {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.video {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	padding-bottom: 50px;
+}
+
+.video_text {
+
+	font-size: 20px;
+	color: #333;
+	font-weight: 500;
+	transition: transform 0.2s;
+	margin-bottom: 0;
+}
+
+.video .video_intro .video_text:hover {
+	color: #e8622d;
+	transition: 1s;
+	
+}
+
+.video .video_intro .video_amount{
+	font-size: 18px;
+	color: grey;
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
