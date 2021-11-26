@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../components/AllPost.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function AllPosts() {
 	const [posts, setPosts] = useState([]);
@@ -12,44 +13,28 @@ function AllPosts() {
 	}, []);
 
 	return (
-		<div className="newPosts">
+		<div className="allPosts">
 			<div className="container">
-                <h1>Articles</h1>
+				<h1>Articles</h1>
 				<section className="posts">
-					{posts.map(
-						(post) =>
-							(
-								<article key={post._Id}>
-									<div className="postImg">
-										<img
-											src={post.picture}
-											alt={post.title}
-										/>
-									</div>
-									<div className="postInfo">
-										<h3>{post.title}</h3>
-										<p>
-											{post.short_text.length > 250
-												? post.short_text.substr(
-														0,
-														250
-												  ) + "..."
-												: post.short_text}
-										</p>
-										{/* <div className="additionalInfo">
-									<div className="postViews">
-										<i class="fas fa-eye"></i>
-										<span>{post.views}</span>
-									</div>
-									<div className="postDate">
-										<i class="far fa-clock"></i>
-										<span>{post.date}</span>
-									</div>
-								</div> */}
-									</div>
-								</article>
-							)
-					)}
+					{posts.map((post) => (
+						<Link key={post._Id} to={`/posts/${post._Id}`}>
+							<article>
+								<div className="postImg">
+									<img src={post.picture} alt={post.title} />
+								</div>
+								<div className="postInfo">
+									<h3>{post.title}</h3>
+									<p>
+										{post.short_text.length > 250
+											? post.short_text.substr(0, 250) +
+											  "..."
+											: post.short_text}
+									</p>
+								</div>
+							</article>
+						</Link>
+					))}
 				</section>
 			</div>
 		</div>
