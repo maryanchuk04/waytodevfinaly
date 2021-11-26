@@ -1,14 +1,15 @@
 .header {
-    background-color: #11324D;
+	background-color: #11324d;
 }
 
-.header-container{
-    max-width:1200px;
-    padding:20px;
-    margin:0 auto;
-    display: flex;
-    justify-content:space-between;
+.header-container {
+	max-width: 1200px;
+	padding: 20px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
 }
+
   
 .logo a{
     cursor: pointer;
@@ -104,4 +105,28 @@ nav.fill ul li a:hover:after {
   -webkit-animation: fill 1s forwards;
   -moz-animation: fill 1s forwards;
   opacity: 1;
+.logo > a {
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.menu {
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	align-items: center;
+}
+
+.menu nav {
+	text-transform: uppercase;
+	margin-left: 30px;
+}
+
+.menu > nav > a {
+	text-decoration: none;
+	color: #fff;
+
 }

@@ -1,0 +1,20 @@
+.postPage {
+	background-color: #f6f6f6;
+	padding: 100px 0;
+}
+
+.postPage .container {
+	border-radius: 15px;
+	background-color: #fff;
+	box-shadow: 0 0 40px -10px rgb(0 0 0 / 30%);
+	padding: 0;
+	overflow: hidden;
+}
+
+.postPage .container img {
+	width: 100%;
+}
+
+.postInfo {
+	padding: 20px 20px;
+}

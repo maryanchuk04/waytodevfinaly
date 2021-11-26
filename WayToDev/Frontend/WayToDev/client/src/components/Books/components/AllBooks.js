@@ -19,30 +19,42 @@ function AllBooks() {
 			<div className="container">
 					<div clasName="books">
 				<div classsName="books_header">
-						<div className="books_title">Programming courses</div>
+						<div className="books_title"><h1>Programming books</h1></div>
 						<a href="/" className="books_btn csbtn">All</a>
+						
 					</div>
-
-					<div class="video">
+                        
+					< div className="book">
 						{book.map(
 							(book, index) =>
 								index < 20 && (
 									<div class="book_intro" key={book._Id}>
-										<img src="https://kniga.biz.ua/images/goods/big/26084.jpg"/>
-										<div class="book_text">
-											{book.title}
+										<div class="image">
+										<img src={book.image}/>
 										</div>
-										<div class="book_avtor">
-											{book.avtor}
-										</div>
+										<div class="alltext">
+										  <div class="book_text">
+											<h1>{book.title}</h1>
+										  </div>
+										  
+										  <div class="description">
+											{book.description}
+										  </div>
+										  <div class="book_avtor">
+											Avtor:{book.avtor}
+										  </div>
+										   <a className="custom-btn btn-9" target="_blank" href={book.link}></a>
+									</div>
 									</div>
 							)
+							
 						)}
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
+		
 		);
 }
 
