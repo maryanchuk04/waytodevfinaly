@@ -1,0 +1,39 @@
+.videoPopup {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.videoPopup .container {
+	z-index: 100;
+	margin: 0;
+	width: 80vw;
+}
+
+.videoOutterBg {
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.videoPopupBlock {
+	background-color: #fff;
+	border-radius: 15px;
+	height: 600px;
+	overflow: hidden;
+	padding: 30px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.videoPopupBlock iframe {
+	height: 100%;
+}
