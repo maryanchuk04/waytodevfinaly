@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./MainBaner.css";
 import Globe from "react-globe.gl";
+import { Link } from "react-router-dom";
 
 function MainBaner() {
 	const globeEl = useRef();
@@ -41,9 +42,9 @@ function MainBaner() {
 						become real programming masters!
 					</p>
 
-					<a href="#" class="banerButton banerReadMore">
+					<Link to="/contacts" class="banerButton banerReadMore">
 						Read More
-					</a>
+					</Link>
 				</div>
 
 				<div className="banerGlobe">
