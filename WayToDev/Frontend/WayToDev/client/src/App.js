@@ -47,10 +47,11 @@ function App() {
 
 					<Route path="/login" element={<Login />} />
 
-					<Route path ="/contacts" element= {<Contacts/>} />
+					<Route path="/contacts" element={<Contacts />} />
 
-					<Route path="/languages" element = {<Languages/>}/>
+					<Route path="/languages" element={<Languages />} />
 				</Routes>
+				<Footer />
 			</BrowserRouter>
 		</div>
 	);

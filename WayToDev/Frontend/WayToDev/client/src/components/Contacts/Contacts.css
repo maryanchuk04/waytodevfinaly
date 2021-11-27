@@ -1,0 +1,100 @@
+.contacts {
+	background: linear-gradient(
+		90deg,
+		rgba(115, 0, 255, 1) 0%,
+		rgba(135, 241, 254, 1) 100%
+	);
+	padding: 50px 0;
+}
+
+.contactsCard {
+	border-radius: 15px;
+	background-color: #fff;
+	padding: 30px;
+	display: flex !important;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contactsCard > img {
+	width: 55%;
+	border-radius: 15px;
+	max-height: 600px;
+	object-fit: cover;
+}
+
+.contactsInfo {
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+}
+
+.contactsInfo > h6,
+.contactsInfo > h1 {
+	text-transform: uppercase;
+}
+
+.contactsInfo > h6:first-child {
+	color: #9ca3ab;
+}
+
+.contactsInfo > h6:last-of-type {
+	font-weight: 600;
+}
+
+.contactsInfo > h1 {
+	font-weight: 600;
+}
+
+.contactsInfo > p {
+	color: #979797;
+	font-weight: 500;
+	margin: 10px 0 30px;
+}
+
+.contactsPrivateInfo > div {
+	margin-bottom: 5px;
+}
+
+.contactsPrivateInfo > div > i {
+	margin-right: 20px;
+	color: blue;
+}
+
+.contactsSocials {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.contactsSocials > a {
+	background-color: #e8e8e8;
+	color: #ffffff;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 20px;
+	transition: all 0.2s linear;
+}
+
+.contactsSocials > a:hover {
+	background-color: #000;
+}
+
+.contactsSocials > a:last-child {
+	margin-right: 0;
+}
+
+.contacts .slick-prev:before,
+.contacts .slick-next:before {
+	font-size: 30px;
+}
+
+.contacts .slick-prev {
+	left: -35px;
+}
