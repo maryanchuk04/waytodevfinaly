@@ -11,12 +11,15 @@
 	border-radius: 15px;
 	background-color: #fff;
 	padding: 30px;
+}
+
+.contactsFlex {
 	display: flex !important;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.contactsCard > img {
+.contactsFlex > img {
 	width: 55%;
 	border-radius: 15px;
 	max-height: 600px;
@@ -96,5 +99,9 @@
 }
 
 .contacts .slick-prev {
-	left: -35px;
+	left: -70px;
+}
+
+.contacts .slick-next {
+	right: -60px;
 }
