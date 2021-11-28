@@ -32,7 +32,6 @@ function App() {
 								<NewPosts />
 								<Social />
 								<AboutLang />
-								<Footer />
 							</React.Fragment>
 						}
 					/>

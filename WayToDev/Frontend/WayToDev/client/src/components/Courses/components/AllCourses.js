@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AllCourses.css";
+import MainVideoPopup from "../../Main/MainVideoPopup.js";
+
 function AllCourses() {
 	const [courses, setCourses] = useState([]);
+	const [currentVideoCode, setCurrentVideoCode] = useState("");
+	const [showVideo, setShowVideo] = useState(false);
 
 	useEffect(() => {
 		axios
@@ -12,45 +16,80 @@ function AllCourses() {
 				setCourses(result.data);
 			});
 	}, []);
+
+	const handleShowVideo = (videoCode) => {
+		setShowVideo(true);
+		setCurrentVideoCode(videoCode);
+	};
+
+	const handleCloseVideo = () => {
+		setShowVideo(false);
+	};
+
 	return (
-		<div class="allCourses">
+		<>
+			<div class="allCourses">
 				<div className="container">
-			        <div className="mainCourses">
-		
-					<div clasName="corses">
-					<div classsName="courses_header">
-						<div className="corses_title">Programming courses</div>
-						<a href="/" className="courses_btn csbtn">All</a>
-					</div>
-					<div class="slider"></div>
-					<div class="video">
-						{courses.map(
-							(course, index) =>
-								index < 20 && (
-									<div class="video_intro" key={course._Id}>
-										<iframe
-											width="100%"
-											src={`https://www.youtube.com/embed/${
-												course.link.split("v=")[1]
-											}?showinfo=0&controls=1`}
-											title={course.name_course}
-											frameborder="0	"
-											allowfullscreen></iframe>
-										<div class="video_text">
-											{course.name_course}
-										</div>
-										<div class="video_avtor">
-											{course.avtor}
-										</div>
-									</div>
-								)
-						)}
+					<div className="mainCourses">
+						<div clasName="corses">
+							<div classsName="courses_header">
+								<div className="corses_title">
+									Programming courses
+								</div>
+								<a href="/" className="courses_btn csbtn">
+									All
+								</a>
+							</div>
+							<div class="slider"></div>
+							<div class="video">
+								{courses.map(
+									(course, index) =>
+										index < 20 && (
+											<div
+												class="video_intro"
+												key={course._Id}
+												onClick={() =>
+													handleShowVideo(
+														course.link.split(
+															"v="
+														)[1]
+													)
+												}>
+												<img
+													src={`https://img.youtube.com/vi/${
+														course.link.split(
+															"v="
+														)[1]
+													}/0.jpg`}
+													alt={course.name_course}
+												/>
+												<div className="video_btn">
+													<button className="video_playbtn">
+														<i class="fas fa-play"></i>
+													</button>
+													<div class="video_text">
+														{course.name_course}
+													</div>
+													<div class="video_avtor">
+														{course.avtor}
+													</div>
+												</div>
+											</div>
+										)
+								)}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		</div>
-		);
+			{showVideo && (
+				<MainVideoPopup
+					videoCode={currentVideoCode}
+					handleCloseVideo={handleCloseVideo}
+				/>
+			)}
+		</>
+	);
 }
 
 export default AllCourses;

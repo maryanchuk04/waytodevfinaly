@@ -26,6 +26,13 @@ function PostPage() {
 			});
 	}, []);
 
+	useEffect(() => {
+		axios.post(
+			`https://waytodev.azurewebsites.net/post/like/${id}`,
+			likeState.active ? 1 : 0
+		);
+	}, [likeState]);
+
 	return (
 		<div className="postPage">
 			<div className="container">
