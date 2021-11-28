@@ -26,12 +26,17 @@ function PostPage() {
 			});
 	}, []);
 
-	useEffect(() => {
-		axios.post(
-			`https://waytodev.azurewebsites.net/post/like/${id}`,
-			likeState.active ? 1 : 0
-		);
-	}, [likeState]);
+	const handleLike = () => {
+		axios.post(`https://waytodev.azurewebsites.net/post/like`, {
+			Id: id,
+			IsLike: likeState.active ? "dislike" : "like",
+		});
+
+		setLikeState({
+			count: likeState.active ? likeState.count - 1 : likeState.count + 1,
+			active: !likeState.active,
+		});
+	};
 
 	return (
 		<div className="postPage">
@@ -40,18 +45,9 @@ function PostPage() {
 				<div className="postInfo">
 					<h1>{postInfo.title}</h1>
 					<p>{postInfo.text}</p>
-					<div
-						className="postInfoLikes"
-						onClick={() =>
-							setLikeState({
-								count: likeState.active
-									? likeState.count - 1
-									: likeState.count + 1,
-								active: !likeState.active,
-							})
-						}>
+					<div className="postInfoLikes" onClick={() => handleLike()}>
 						<div
-							class={`heart ${
+							className={`heart ${
 								likeState.active ? "is-active" : ""
 							}`}></div>
 						{likeState.count}
