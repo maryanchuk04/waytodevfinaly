@@ -1,8 +1,8 @@
-.allCourses  .mainCourses {
+.allCourses .mainCourses {
 	background-color: #ffffff;
 }
 
-.allCourses  .courses {
+.allCourses .courses {
 	width: 100%;
 }
 
@@ -13,14 +13,14 @@
 	font-weight: 500;
 }
 
-.allCourses  .corses_title {
+.allCourses .corses_title {
 	font-size: 40px;
 	color: #000;
-    font-weight: 700;
+	font-weight: 700;
 	margin-top: 50px;
 }
 
-.allCourses  .courses_btn {
+.allCourses .courses_btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -34,23 +34,23 @@
 	backface-visibility: hidden;
 	border: 0.3rem solid transparent;
 	border-radius: 3rem;
-    margin-top: 40px;
-    margin-left: 0;
+	margin-top: 40px;
+	margin-left: 0;
 	margin-bottom: 40px;
 }
 
-.allCourses  .csbtn {
+.allCourses .csbtn {
 	border-color: rgb(0, 0, 0);
 	transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
 }
 
-.allCourses  .csbtn:hover {
+.allCourses .csbtn:hover {
 	text-decoration: none;
 	color: rgb(0, 0, 0);
 	transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
-.allCourses  .video {
+.allCourses .video {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 30px;
@@ -59,33 +59,32 @@
 	padding-bottom: 80px;
 }
 
-.allCourses  .video_intro {
+.allCourses .video_intro {
 	width: 100%;
 	justify-self: center;
 }
 
-.allCourses  .video_intro:hover .video_text {
+.allCourses .video_intro:hover .video_text {
 	color: #e8622d;
 }
 
-.allCourses  .video_intro iframe {
+.allCourses .video_intro iframe {
 	height: 300px;
 	width: 100%;
 	border-radius: 20px;
 	margin: 10px 0 10px 0;
 	-webkit-transition: all 1.5s;
-    transition: all 1.5s;
+	transition: all 1.5s;
 }
 
 .allCourses .video_intro iframe:hover {
 	transform: scale(1.1);
-	animation-direction:alternate;
-    transition: all 1.5s;
-    -webkit-transition: all 1.5s;
+	animation-direction: alternate;
+	transition: all 1.5s;
+	-webkit-transition: all 1.5s;
 }
 
-
-.allCourses  .video_text {
+.allCourses .video_text {
 	font-size: 20px;
 	color: #333;
 	font-weight: 500;
@@ -95,7 +94,7 @@
 	cursor: pointer;
 }
 
-.allCourses  .video .video_intro .video_avtor {
+.allCourses .video .video_intro .video_avtor {
 	font-size: 18px;
 	color: grey;
 	font-weight: 500;
@@ -104,45 +103,91 @@
 }
 
 .slider-slider {
-    padding: 0 110px;
+	padding: 0 110px;
 }
 
 .slider-arrow:focus {
-    outline: 0;
+	outline: 0;
 }
 
 .slider-arrow {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    transform: translateY(-50%);
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	transform: translateY(-50%);
 
-    border: 0;
-    background: none;
+	border: 0;
+	background: none;
 
-    display: block;
-    font-size: 0;
-    color: transparent;
+	display: block;
+	font-size: 0;
+	color: transparent;
 }
 
 .slider-arrow:after {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
+	content: "";
+	display: block;
+	width: 16px;
+	height: 16px;
 
-    border-top: 2px solid rgb(0, 0, 0);
-    border-left: 2px solid rgb(0, 0, 0);
+	border-top: 2px solid rgb(0, 0, 0);
+	border-left: 2px solid rgb(0, 0, 0);
 }
 
 .slider-prev {
-    left: 0;
-    transform: rotate(-45deg);
+	left: 0;
+	transform: rotate(-45deg);
 }
 
 .slider-next {
-    right: 0;
-    transform: rotate(135deg);
+	right: 0;
+	transform: rotate(135deg);
 }
 
+.video_btn {
+	position: relative;
+	width: inherit;
+	height: inherit;
+	z-index: 1;
+}
+
+.video_playbtn {
+	position: absolute;
+	right: 5%;
+	bottom: 106%;
+	border-radius: 50%;
+	background-color: #ffffffeb;
+	color: #000;
+	font-size: 12px;
+	width: 60px;
+	height: 60px;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.video_playbtn:focus,
+.video_playbtn:active {
+	outline: none;
+}
+
+.video_intro:hover .video_playbtn {
+	animation: zoomedBtn 0.5s linear;
+}
+
+@keyframes zoomedBtn {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

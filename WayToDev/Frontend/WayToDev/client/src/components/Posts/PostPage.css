@@ -30,7 +30,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 90px;
+	width: 100px;
 	height: 35px;
 }
 
@@ -56,8 +56,13 @@
 	margin-top: 50px;
 }
 
+.container.postInfoContainer > form {
+	display: flex;
+	justify-content: space-between;
+}
+
 .postInfoContainer form input {
-	width: 94%;
+	width: -webkit-fill-available;
 	border-radius: 5px;
 	border: 1px solid #007acc;
 	outline-style: none;
@@ -67,6 +72,6 @@
 .postInfoContainer form button {
 	background-color: transparent;
 	border: none;
-	margin-left: 30px;
+	margin-left: 20px;
 	cursor: pointer;
 }
