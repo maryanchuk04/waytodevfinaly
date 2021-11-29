@@ -15,6 +15,7 @@ import BooksPage from "./components/Books/BooksPage.js";
 import Login from "./components/Login/Login.js";
 import Contacts from "./components/Contacts/Contacts.js";
 import Languages from "./components/Languages/Languages.js";
+import Profile from "./components/Profile/Profile.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	return (
@@ -49,6 +50,8 @@ function App() {
 					<Route path="/contacts" element={<Contacts />} />
 
 					<Route path="/languages" element={<Languages />} />
+
+					<Route path="/profile" element={<Profile />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
