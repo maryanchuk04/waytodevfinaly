@@ -44,7 +44,7 @@ function PostPage() {
 				<img src={postInfo.picture} alt={postInfo.title} />
 				<div className="postInfo">
 					<h1>{postInfo.title}</h1>
-					<p>{postInfo.text}</p>
+					<p dangerouslySetInnerHTML={{ __html: postInfo.text }}></p>
 					<div className="postInfoLikes" onClick={() => handleLike()}>
 						<div
 							className={`heart ${
