@@ -31,7 +31,10 @@ function Contacts() {
 									<h6>Hello everyone, I am</h6>
 									<h1>{developer.name}</h1>
 									<h6>{developer.position}</h6>
-									<p>{developer.description}</p>
+									<p
+										dangerouslySetInnerHTML={{
+											__html: developer.description,
+										}}></p>
 
 									<div className="contactsPrivateInfo">
 										<div>
