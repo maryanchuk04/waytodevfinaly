@@ -1,6 +1,8 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LoginWindow.css";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "../../../redux/actions.js";
 
 function LoginWindow() {
 	const [signInUp, setSignInUp] = useState(false);
@@ -8,6 +10,12 @@ function LoginWindow() {
 		email: "",
 		password: "",
 	});
+	const userData = useSelector((state) => state);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		console.log(userData);
+	}, [userData]);
 
 	const handleSignIn = (e) => {
 		e.preventDefault();
@@ -18,6 +26,13 @@ function LoginWindow() {
 			})
 			.then((result) => {
 				console.log(result);
+				dispatch(
+					setUser({
+						email: signInData.email,
+						password: signInData.password,
+						access_token: result.data,
+					})
+				);
 			})
 			.catch((err) => {
 				console.log(err);
