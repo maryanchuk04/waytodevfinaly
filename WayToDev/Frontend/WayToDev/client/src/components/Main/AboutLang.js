@@ -30,6 +30,9 @@ function AboutLang() {
 						READ MORE
 					</a>
 				</div>
+				<a href="#" className="scrollDown" id="aboutlang">
+							<span></span>
+				</a>
 			</div>
 		</div>
 	);

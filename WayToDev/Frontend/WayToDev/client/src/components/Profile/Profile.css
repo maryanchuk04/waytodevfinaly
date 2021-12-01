@@ -1,8 +1,5 @@
-body{
-    background: #f7f7ff;
-    margin-top:20px;
-}
-.card {
+
+.main-body .row .card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,26 +17,26 @@ body{
     margin: 100px 0 100px;
 }
 
-.bg-primary {
+.main-body .row .bg-primary {
     background-color: rgb(206, 206, 206) !important;
 }
 
-img {
+.main-body .row img {
     margin: 20px;
     height: 130px;
     width: 130px;
 }
 
-.btn-primary {
+.main-body .row .btn-primary {
     background-color: #11324d;
     border-color: #11324d;
 }
 
-.btn-primary:hover {
+.main-body .row .btn-primary:hover {
     background-color: #0e283d;
     border-color: #0e283d;
 }
 
-.btn {
+.main-body .row .btn {
     margin: 20px 70px;
 }
