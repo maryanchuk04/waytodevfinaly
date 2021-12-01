@@ -32,8 +32,8 @@ function MainBaner() {
 			<div class="container">
 				<div class="banerLeft">
 					<h1>
-						Develop yourself as a developer with our team{" "}
-						🎅<span>WayToDev</span>🎅
+						Develop yourself as a developer with our team 🎅
+						<span>WayToDev</span>🎅
 					</h1>
 
 					<p>
@@ -59,13 +59,8 @@ function MainBaner() {
 						backgroundColor="rgba(0,0,0,0)"
 						initialCameraDistanceRadiusScale={0}
 					/>
-					
 				</div>
-  						
 			</div>
-				<div class="container2">
-					<a href="#"><span></span></a>
-				</div>
 		</div>
 	);
 }
