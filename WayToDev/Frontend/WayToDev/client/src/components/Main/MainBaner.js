@@ -33,7 +33,7 @@ function MainBaner() {
 				<div class="banerLeft">
 					<h1>
 						Develop yourself as a developer with our team{" "}
-						<span>WayToDev🎅</span>
+						🎅<span>WayToDev</span>🎅
 					</h1>
 
 					<p>
