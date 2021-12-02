@@ -102,6 +102,7 @@
 	-webkit-animation: sdb04 2s infinite;
 	animation: sdb04 2s infinite;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .languages .scrollDown.reverse span {

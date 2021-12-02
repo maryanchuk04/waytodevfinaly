@@ -10,6 +10,7 @@
 	display: flex;
 	align-items: center;
 	padding-top: 50px;
+	padding-bottom: 30px;
 	font-weight: 500;
 }
 
@@ -174,6 +175,7 @@
 	-webkit-animation: sdb04 2s infinite;
 	animation: sdb04 2s infinite;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 @-webkit-keyframes sdb04 {

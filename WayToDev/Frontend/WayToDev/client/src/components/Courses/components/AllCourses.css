@@ -152,7 +152,7 @@
 .video_btn {
 	position: relative;
 	width: inherit;
-	height: inherit;
+	height: fit-content;
 	z-index: 1;
 }
 

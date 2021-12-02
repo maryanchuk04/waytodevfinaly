@@ -17,7 +17,12 @@ function NewPosts() {
 		<div className="newPosts" id="posts">
 			<div className="container">
 				<div>
-					<h1>New posts</h1>
+					<div class="header__posts">
+						<h1>New posts</h1>
+						<a href="/" className="courses_btn csbtn">
+							All posts
+						</a>
+					</div>
 
 					<section className="posts">
 						{posts.map(
