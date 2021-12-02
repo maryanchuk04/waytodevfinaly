@@ -103,6 +103,36 @@
 	animation: sdb04 2s infinite;
 	box-sizing: border-box;
 }
+
+.languages .scrollDown.reverse span {
+	transform: rotate(135deg);
+	-webkit-animation: sdb02 2s infinite;
+	animation: sdb02 2s infinite;
+}
+
+@-webkit-keyframes sdb02 {
+	0% {
+		-webkit-transform: rotate(135deg) translate(0, 0);
+	}
+	20% {
+		-webkit-transform: rotate(135deg) translate(-10px, 10px);
+	}
+	40% {
+		-webkit-transform: rotate(135deg) translate(0, 0);
+	}
+}
+@keyframes sdb02 {
+	0% {
+		transform: rotate(135deg) translate(0, 0);
+	}
+	20% {
+		transform: rotate(135deg) translate(-10px, 10px);
+	}
+	40% {
+		transform: rotate(135deg) translate(0, 0);
+	}
+}
+
 @-webkit-keyframes sdb04 {
 	0% {
 		-webkit-transform: rotate(-45deg) translate(0, 0);
@@ -125,4 +155,3 @@
 		transform: rotate(-45deg) translate(0, 0);
 	}
 }
-
