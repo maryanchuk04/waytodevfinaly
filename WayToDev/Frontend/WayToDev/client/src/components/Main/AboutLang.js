@@ -33,8 +33,9 @@ function AboutLang() {
 					</a>
 				</div>
 				<Link
-					to="header"
+					to="myBaner"
 					className="scrollDown reverse"
+					offset={-85}
 					spy={true}
 					smooth={true}
 					duration={500}>

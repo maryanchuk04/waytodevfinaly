@@ -2,11 +2,44 @@
 	background-color: #f6f6f6;
 }
 
+.header__posts {
+	display: flex;
+}
+
 .newPosts h1 {
 	color: #333;
 	font-size: 36px;
 	font-weight: 700;
 	padding: 50px 0 30px;
+}
+
+.courses_btn {
+	margin-top: 40px;
+	height: fit-content;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	backface-visibility: hidden;
+	border: 0.3rem solid transparent;
+	border-radius: 3rem;
+	margin-left: 30px;
+}
+
+.csbtn {
+	border-color: rgb(0, 0, 0);
+	transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.csbtn:hover {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
 .newPosts section {
@@ -94,6 +127,7 @@
 	-webkit-animation: sdb04 2s infinite;
 	animation: sdb04 2s infinite;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 @-webkit-keyframes sdb04 {
 	0% {
