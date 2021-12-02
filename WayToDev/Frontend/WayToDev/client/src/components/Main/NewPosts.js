@@ -15,6 +15,7 @@ function NewPosts() {
 	return (
 		<div className="newPosts">
 			<div className="container">
+				<div>
 				<h1>New posts</h1>
 
 				<section className="posts">
@@ -45,6 +46,10 @@ function NewPosts() {
 							)
 					)}
 				</section>
+				</div>
+				<a href="#aboutlang" className="scrollDown" id="posts">
+							<span></span>
+				</a>
 			</div>
 		</div>
 	);

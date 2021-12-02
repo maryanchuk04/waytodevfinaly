@@ -72,7 +72,7 @@ function MainCourses() {
 							)}
 						</div>
 
-						<a href="#" className="scrollDown">
+						<a href="#posts" className="scrollDown">
 							<span></span>
 						</a>
 					</div>
