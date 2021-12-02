@@ -30,7 +30,7 @@ function AllCourses() {
 		<>
 			<div class="allCourses">
 				<div className="container">
-					<div className="mainCourses">
+					<div className="mainCourses2">
 						<div clasName="corses">
 							<div classsName="courses_header">
 								<div className="corses_title">
