@@ -1,4 +1,4 @@
-.allCourses .mainCourses {
+.allCourses .mainCourses2 {
 	background-color: #ffffff;
 }
 
@@ -61,7 +61,11 @@
 
 .allCourses .video_intro {
 	width: 100%;
-	justify-self: center;
+	cursor: pointer;
+}
+
+.allCourses .video_intro img {
+	width: 100%;
 }
 
 .allCourses .video_intro:hover .video_text {
@@ -155,7 +159,7 @@
 .video_playbtn {
 	position: absolute;
 	right: 5%;
-	bottom: 106%;
+	bottom: 125%;
 	border-radius: 50%;
 	background-color: #ffffffeb;
 	color: #000;

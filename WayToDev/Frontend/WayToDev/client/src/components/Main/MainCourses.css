@@ -2,11 +2,11 @@
 	background-color: #696969;
 }
 
-.courses {
+.mainCourses .courses {
 	width: 100%;
 }
 
-.courses_header {
+.mainCourses .courses_header {
 	display: flex;
 	align-items: center;
 	padding-top: 50px;
@@ -14,12 +14,12 @@
 	font-weight: 500;
 }
 
-.corses_title {
+.mainCourses .corses_title {
 	font-size: 40px;
 	color: #000;
 }
 
-.courses_btn {
+.mainCourses .courses_btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -36,18 +36,18 @@
 	margin-left: 30px;
 }
 
-.csbtn {
+.mainCourses .csbtn {
 	border-color: rgb(0, 0, 0);
 	transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
 }
 
-.csbtn:hover {
+.mainCourses .csbtn:hover {
 	text-decoration: none;
 	color: rgb(0, 0, 0);
 	transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
-.video {
+.mainCourses .video {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 30px;
@@ -56,7 +56,7 @@
 	padding-bottom: 50px;
 }
 
-.video_intro {
+.mainCourses .video_intro {
 	width: 100%;
 	justify-self: center;
 	height: 300px;
@@ -65,25 +65,25 @@
 	z-index: 2;
 }
 
-.video_intro:hover .video_text {
+.mainCourses .video_intro:hover .video_text {
 	color: #e8622d;
 }
 
-.video_intro img {
+.mainCourses .video_intro img {
 	width: inherit;
 	object-fit: cover;
 	height: 75%;
 }
 
-.video_intro:nth-child(5n - 4) {
+.mainCourses .video_intro:nth-child(5n - 4) {
 	width: 100%;
 }
 
-.video_intro:nth-child(5n - 4) img {
+.mainCourses .video_intro:nth-child(5n - 4) img {
 	height: 85%;
 }
 
-.video_text {
+.mainCourses .video_text {
 	font-size: 20px;
 	color: #333;
 	font-weight: 500;
@@ -92,7 +92,7 @@
 	transition: color 0.3s linear;
 }
 
-.video .video_intro .video_avtor {
+.mainCourses .video .video_intro .video_avtor {
 	font-size: 18px;
 	color: grey;
 	font-weight: 500;
@@ -100,17 +100,17 @@
 	margin-bottom: 30px;
 }
 
-.video_btn {
+.mainCourses .video_btn {
 	position: relative;
 	width: inherit;
 	height: fit-content;
 	z-index: 1;
 }
 
-.video_playbtn {
+.mainCourses .video_playbtn {
 	position: absolute;
 	right: 5%;
-	bottom: 106%;
+	bottom: 125%;
 	border-radius: 50%;
 	background-color: #ffffffeb;
 	color: #000;
@@ -126,12 +126,12 @@
 	border: none;
 }
 
-.video_playbtn:focus,
-.video_playbtn:active {
+.mainCourses .video_playbtn:focus,
+.mainCourses .video_playbtn:active {
 	outline: none;
 }
 
-.video_intro:hover .video_playbtn {
+.mainCourses .video_intro:hover .video_playbtn {
 	animation: zoomedBtn 0.5s linear;
 }
 
