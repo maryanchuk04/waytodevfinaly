@@ -28,7 +28,7 @@ function MainBaner() {
 	}, []);
 
 	return (
-		<div class="mainBaner">
+		<div class="mainBaner" id="myBaner">
 			<div class="container">
 				<div class="banerLeft">
 					<h1>

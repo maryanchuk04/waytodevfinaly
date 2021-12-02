@@ -105,3 +105,10 @@ nav.fill ul li a:hover:after {
 	-moz-animation: fill 1s forwards;
 	opacity: 1;
 }
+
+.sticky {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+}
