@@ -40,3 +40,47 @@
 .main-body .row .btn {
     margin: 20px 70px;
 }
+
+.profile {
+	background: #f7f7ff;
+	width: 100vw;
+	padding: 100px 0 100px;
+}
+.profile .main-body .card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 0 solid transparent;
+	border-radius: 0.25rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%),
+		0 2px 6px 0 rgb(206 206 238 / 54%);
+}
+
+.profile .main-body .bg-primary {
+	background-color: rgb(206, 206, 206) !important;
+}
+
+.profile .main-body img {
+	margin: 20px;
+	height: 130px;
+	width: 130px;
+}
+
+.profile .main-body .btn-primary {
+	background-color: #11324d;
+	border-color: #11324d;
+}
+
+.profile .main-body .btn-primary:hover {
+	background-color: #0e283d;
+	border-color: #0e283d;
+}
+
+.profile .main-body .btn {
+	margin: 20px 70px;
+}

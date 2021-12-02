@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./LoginWindow.css";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "../../../redux/actions.js";
+import { useNavigate } from "react-router-dom";
 
 function LoginWindow() {
 	const [signInUp, setSignInUp] = useState(false);
@@ -12,6 +13,7 @@ function LoginWindow() {
 	});
 	const userData = useSelector((state) => state);
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		console.log(userData);
@@ -33,6 +35,7 @@ function LoginWindow() {
 						access_token: result.data,
 					})
 				);
+				navigate("/profile");
 			})
 			.catch((err) => {
 				console.log(err);
