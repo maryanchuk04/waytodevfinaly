@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MainCourses.css";
 import axios from "axios";
 import MainVideoPopup from "./MainVideoPopup.js";
+import { Link } from "react-scroll";
 
 function MainCourses() {
 	const [courses, setCourses] = useState([]);
@@ -72,9 +73,15 @@ function MainCourses() {
 							)}
 						</div>
 
-						<a href="#posts" className="scrollDown">
+						<Link
+							to="posts"
+							className="scrollDown"
+							spy={true}
+							smooth={true}
+							offset={100}
+							duration={500}>
 							<span></span>
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

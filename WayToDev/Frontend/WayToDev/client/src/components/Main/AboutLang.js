@@ -1,6 +1,8 @@
 import React from "react";
 import "./AboutLang.css";
 
+import { Link } from "react-scroll";
+
 function AboutLang() {
 	return (
 		<div class="languages">
@@ -30,9 +32,14 @@ function AboutLang() {
 						READ MORE
 					</a>
 				</div>
-				<a href="#" className="scrollDown" id="aboutlang">
-							<span></span>
-				</a>
+				<Link
+					to="header"
+					className="scrollDown reverse"
+					spy={true}
+					smooth={true}
+					duration={500}>
+					<span></span>
+				</Link>
 			</div>
 		</div>
 	);

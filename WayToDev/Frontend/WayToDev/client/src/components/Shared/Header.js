@@ -4,7 +4,7 @@ import "./Header.css";
 
 function Header() {
 	return (
-		<header class="header">
+		<header class="header" id="header">
 			<div class="header-container">
 				<div class="logo">
 					<Link to="/"> WayToDev </Link>
