@@ -32,8 +32,8 @@ function MainBaner() {
 			<div class="container">
 				<div class="banerLeft">
 					<h1>
-						Develop yourself as a developer with our team 🎅
-						<span>WayToDev</span>🎅
+						Develop yourself as a developer with our team
+						<span> WayToDev</span>
 					</h1>
 
 					<p>
