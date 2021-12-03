@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./PostPage.css";
 
 function PostPage() {
@@ -10,6 +11,7 @@ function PostPage() {
 		active: false,
 	});
 	const { id } = useParams();
+	const userData = useSelector((state) => state);
 
 	useEffect(() => {
 		axios
@@ -19,23 +21,35 @@ function PostPage() {
 				if (result.data) {
 					setPostInfo(result.data);
 					setLikeState({
-						...likeState,
-						count: result.data.like !== null ? result.data.like : 0,
+						active: result.data.like.some(
+							(elem) => elem.user_id === userData.user_id
+						),
+						count: result.data.like.length,
 					});
 				}
 			});
+		console.log(userData);
+		console.log(localStorage.getItem("access_token"));
 	}, []);
 
 	const handleLike = () => {
-		axios.post(`https://waytodev.azurewebsites.net/post/like`, {
-			Id: id,
-			IsLike: likeState.active ? "dislike" : "like",
-		});
-
-		setLikeState({
-			count: likeState.active ? likeState.count - 1 : likeState.count + 1,
-			active: !likeState.active,
-		});
+		console.log(userData);
+		console.log(id);
+		userData.user_id !== "" &&
+			axios
+				.post(`https://waytodev.azurewebsites.net/post/like`, {
+					post_id: id,
+					IsLike: !likeState.active,
+					user_id: userData.user_id,
+				})
+				.then((result) => {
+					console.log(result);
+					likeState.count !== result.data.count &&
+						setLikeState({
+							count: result.data.count,
+							active: !likeState.active,
+						});
+				});
 	};
 
 	return (
