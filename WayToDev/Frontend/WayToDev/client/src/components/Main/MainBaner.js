@@ -42,7 +42,7 @@ function MainBaner() {
 						become real programming masters!
 					</p>
 
-					<Link to="/contacts" class="banerButton banerReadMore">
+					<Link to="/courses" class="banerButton banerReadMore">
 						Read More
 					</Link>
 				</div>

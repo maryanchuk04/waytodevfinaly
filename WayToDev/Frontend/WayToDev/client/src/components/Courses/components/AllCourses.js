@@ -36,9 +36,32 @@ function AllCourses() {
 								<div className="corses_title">
 									Programming courses
 								</div>
-								<a href="/" className="courses_btn csbtn">
-									All
-								</a>
+								<div class="btn__filter">
+									<a href="/" className="courses_btn csbtn" title="Python">
+										<img src="https://itproger.com/img/spravka/python.svg"></img>
+									</a>
+									<a href="/" className="courses_btn csbtn">
+										<img src="https://itproger.com/img/spravka/java.svg" title="Java"></img>
+									</a>
+									<a href="/" className="courses_btn csbtn">
+										<img src="https://itproger.com/img/spravka/cpp.svg" title="С++"></img>
+									</a>
+									<a href="/" className="courses_btn csbtn">
+										<img src="https://itproger.com/img/spravka/csharp.svg" title="C#"></img>
+									</a>
+									<a href="/" className="courses_btn csbtn">
+										<img src="https://itproger.com/img/spravka/php.svg" title="PHP"></img>
+									</a>
+									<a href="/" className="courses_btn csbtn">
+										<img src="https://itproger.com/img/spravka/javascript.svg" title="JavaScript"></img>
+									</a>
+									<a href="/" className="courses_btn csbtn">
+										<img src="https://itproger.com/img/spravka/css.svg" title="Css"></img>
+									</a>
+									<a href="/" className="courses_btn csbtn">
+										<img src="https://itproger.com/img/spravka/html.svg" title="Html"></img>
+									</a>
+								</div>
 							</div>
 							<div class="slider"></div>
 							<div class="video">
