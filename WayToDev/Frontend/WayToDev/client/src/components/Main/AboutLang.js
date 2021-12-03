@@ -28,7 +28,7 @@ function AboutLang() {
 							to choose, we can help you ...
 						</p>
 					</div>
-					<a href="/languages" className="language_btn langbtn">
+					<a href="/books" className="language_btn langbtn">
 						READ MORE
 					</a>
 				</div>

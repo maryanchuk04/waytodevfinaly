@@ -19,7 +19,7 @@ function NewPosts() {
 				<div>
 					<div class="header__posts">
 						<h1>New posts</h1>
-						<a href="/" className="courses_btn csbtn">
+						<a href="/posts" className="courses_btn csbtn">
 							All posts
 						</a>
 					</div>
