@@ -8,7 +8,7 @@ export const DEVS_INFO = [
 		phone: "+38 (095) 516 59 60",
 		email: "dvoryannikovserhiy@gmail.com",
 		address: "Gagarina 7",
-		img: "https://i.ibb.co/f2BTwQy/viber-2021-11-26-21-37-15-877.jpg",
+		img: "https://i.ibb.co/sJj1gJG/viber-2021-12-02-21-57-42-509.jpg",
 		socials: {
 			facebook: "https://www.facebook.com/profile.php?id=100074416986513",
 			instagram: "https://www.instagram.com/dvoriannikovsergii/",
@@ -24,7 +24,7 @@ export const DEVS_INFO = [
 		phone: "+38 (066) 567 10 03",
 		email: "lion20914king@gmail.com",
 		address: "Salt-Schedrina 7",
-		img: "https://i.ibb.co/7KL5tWL/IMG-8817.jpg",
+		img: "https://i.ibb.co/NtF2Dsh/IMG-7071-1.jpg",
 		socials: {
 			facebook: "https://www.facebook.com/ffrgd.ewexa",
 			instagram: "https://www.instagram.com/_maryanchukm_/",
@@ -40,7 +40,7 @@ export const DEVS_INFO = [
 		phone: "+38 (099) 561 08 17",
 		email: "varyaa2002@gmail.com",
 		address: "Golovna 69/7",
-		img: "https://i.ibb.co/x7HcP7D/photo-2021-11-29-15-19-21.jpg",
+		img: "https://i.ibb.co/y5bfJNy/photo-2021-12-02-22-37-43.jpg",
 		socials: {
 			facebook: "https://www.facebook.com/profile.php?id=100011135291408",
 			instagram: "https://www.instagram.com/varya_2908/",
@@ -56,7 +56,7 @@ export const DEVS_INFO = [
 		phone: "+38 (095) 516 59 60",
 		email: "romanyuk1504@gmail.com",
 		address: "Chernivtsi",
-		img: "https://i.ibb.co/tDkHxS2/photo-2021-11-ddd-01-51.jpg",
+		img: "https://i.ibb.co/fHRFVpt/photo-2021-12-02-22-03-02.jpg",
 		socials: {
 			facebook: "https://www.facebook.com/profile.php?id=100017560054203",
 			instagram: "https://www.instagram.com/the___rmk/",
@@ -65,14 +65,14 @@ export const DEVS_INFO = [
 	},
 	{
 		name: "Nazar Lakusta",
-		position: "DB Tech",
+		position: "Data Science Tech",
 		description:
 			"I was born and live in Shipintsy. <br>I've been programming about four years already. <br>My dream is to become a qualified Java programmer and work with him in Ukraine.",
 		birthday: "17th October 2003",
 		phone: "+38 (095) 767 38 02",
 		email: "nazarlakusta0303@gmail.com",
 		address: "Golovna 88-a",
-		img: "https://i.ibb.co/XDNxnTS/20200324-161808.jpg",
+		img: "https://i.ibb.co/n1HC1GN/photo-2021-12-02-21-49-16.jpg",
 		socials: {
 			facebook: "https://www.facebook.com/profile.php?id=100063116919332",
 			instagram: "https://www.instagram.com/lakusta.nazar/",
