@@ -1,5 +1,6 @@
 import React from "react";
 import "./Social.css";
+import { Link as LinkScroll } from "react-scroll";
 function Social() {
 	return (
 		<div className="socials" id="aboutlang">
@@ -9,6 +10,7 @@ function Social() {
 					Join the community of programmers, learn a lot from the IT
 					world and be aware of all the events!
 				</p>
+				
 				<div className="social_links">
 					<div class="wrapper">
 						<div class="button">
