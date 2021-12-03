@@ -2,6 +2,7 @@ import React from "react";
 import "./AboutLang.css";
 
 import { Link } from "react-scroll";
+import { Link as LinkRouter } from "react-router-dom";
 
 function AboutLang() {
 	return (
@@ -28,9 +29,9 @@ function AboutLang() {
 							to choose, we can help you ...
 						</p>
 					</div>
-					<a href="/books" className="language_btn langbtn">
+					<LinkRouter to="/books" className="language_btn langbtn">
 						READ MORE
-					</a>
+					</LinkRouter>
 				</div>
 				<Link
 					to="myBaner"
