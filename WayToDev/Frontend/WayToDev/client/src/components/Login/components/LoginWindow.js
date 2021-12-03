@@ -30,7 +30,7 @@ function LoginWindow() {
 				console.log(result);
 				dispatch(
 					setUser({
-						user_id: result.data.user_id,
+						_Id: result.data.user_id,
 						email: signInData.email,
 						password: signInData.password,
 						access_token: result.data.access_token,

@@ -22,7 +22,7 @@ function PostPage() {
 					setPostInfo(result.data);
 					setLikeState({
 						active: result.data.like.some(
-							(elem) => elem.user_id === userData.user_id
+							(elem) => elem.user_id === userData._Id
 						),
 						count: result.data.like.length,
 					});
@@ -35,12 +35,12 @@ function PostPage() {
 	const handleLike = () => {
 		console.log(userData);
 		console.log(id);
-		userData.user_id !== "" &&
+		userData._Id !== "" &&
 			axios
 				.post(`https://waytodev.azurewebsites.net/post/like`, {
 					post_id: id,
 					IsLike: !likeState.active,
-					user_id: userData.user_id,
+					user_id: userData._Id,
 				})
 				.then((result) => {
 					console.log(result);

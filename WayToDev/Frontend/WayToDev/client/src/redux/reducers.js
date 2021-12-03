@@ -1,18 +1,26 @@
 import { SET_USER } from "./actionTypes";
-import axios from "axios";
 
-const initState = {
-	user_id: "",
+let initState = JSON.parse(localStorage.getItem("userInfo")) || {
+	_Id: "",
+	name: "",
 	email: "",
 	password: "",
-	access_token: localStorage.getItem("access_token") || "",
+	picture: null,
+	favourites: null,
+	access_token: "",
 };
+
+console.log(localStorage.getItem("userInfo"));
 
 export const userReducer = (state = initState, action) => {
 	switch (action.type) {
 		case SET_USER:
-			localStorage.setItem("access_token", action.payload.access_token);
-			return action.payload;
+			console.log({ ...state, ...action.payload });
+			localStorage.setItem(
+				"userInfo",
+				JSON.stringify({ ...state, ...action.payload })
+			);
+			return { ...state, ...action.payload };
 		default:
 			return state;
 	}
