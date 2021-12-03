@@ -4,6 +4,7 @@ import "./LoginWindow.css";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "../../../redux/actions.js";
 import { useNavigate } from "react-router-dom";
+import LoginG from "../LoginG.js";
 
 function LoginWindow() {
 	const [signInUp, setSignInUp] = useState(false);
@@ -73,8 +74,10 @@ function LoginWindow() {
 					<div className="form-container sign-in-container">
 						<form action="#">
 							<h1>Sign IN</h1>
+							
 							<div className="social-container">
-								<a href="#" className="social">
+								<LoginG/>
+								<a href="#" className="social">				
 									<i className="fab fa-facebook-f"></i>
 								</a>
 								<a href="#" className="social">
