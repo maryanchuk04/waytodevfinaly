@@ -89,6 +89,7 @@ function MainCourses() {
 				<MainVideoPopup
 					videoCode={currentVideoCode}
 					handleCloseVideo={handleCloseVideo}
+					showVideo={showVideo}
 				/>
 			)}
 		</>
