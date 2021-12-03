@@ -84,6 +84,7 @@ function AllCourses() {
 			</div>
 			{showVideo && (
 				<MainVideoPopup
+					showVideo={showVideo}
 					videoCode={currentVideoCode}
 					handleCloseVideo={handleCloseVideo}
 				/>
