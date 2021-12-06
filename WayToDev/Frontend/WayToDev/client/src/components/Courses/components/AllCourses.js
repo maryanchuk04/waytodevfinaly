@@ -95,7 +95,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Web")
+											handleChangeCategory(e, "JS")
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -105,17 +105,17 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Web")
+											handleChangeCategory(e, "CSS")
 										}
 										href="/"
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/css.svg"
-											title="Css"></img>
+											title="CSS"></img>
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Web")
+											handleChangeCategory(e, "HTML")
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -123,12 +123,52 @@ function AllCourses() {
 											src="https://itproger.com/img/spravka/html.svg"
 											title="Html"></img>
 									</a>
+									<a
+										onClick={(e) =>
+											handleChangeCategory(e, "Swift")
+										}
+										href="/"
+										className="courses_btn csbtn">
+										<img
+											src="https://i.ibb.co/fGJvjN4/swift.png"
+											title="Swift"></img>
+									</a>
+									<a
+										onClick={(e) =>
+											handleChangeCategory(e, "Ruby")
+										}
+										href="/"
+										className="courses_btn csbtn">
+										<img
+											src="https://i.ibb.co/SJ9Csn0/ruby-1.png"
+											title="Ruby"></img>
+									</a>
+									<a
+										onClick={(e) =>
+											handleChangeCategory(e, "Go")
+										}
+										href="/"
+										className="courses_btn csbtn">
+										<img
+											src="https://i.ibb.co/S7WNZTB/go.png"
+											title="Go"></img>
+									</a>
+									<a
+										onClick={(e) =>
+											handleChangeCategory(e, "all")
+										}
+										href="/"
+										className="courses_btn csbtn">
+										<img
+											src="https://cdn.iconscout.com/icon/premium/png-512-thumb/other-1995801-1686737.png"
+											title="All"></img>
+									</a>
 								</div>
 							</div>
 							<div class="slider"></div>
 							<div class="video">
 								{courses.map((course, index) =>
-									index < 20 &&
+									
 									categoryVideo === course.category ? (
 										<div
 											class="video_intro"
