@@ -2,12 +2,24 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AllCourses.css";
 import MainVideoPopup from "../../Main/MainVideoPopup.js";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function AllCourses() {
 	const [courses, setCourses] = useState([]);
 	const [currentVideoCode, setCurrentVideoCode] = useState("");
 	const [showVideo, setShowVideo] = useState(false);
 	const [categoryVideo, setCategoryVideo] = useState("all");
+	const sliderSettings = {
+		dots: true,
+		infinite: true,
+		arrows: false,
+		speed: 500,
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		draggable: false,
+	};
 
 	useEffect(() => {
 		axios
@@ -43,7 +55,7 @@ function AllCourses() {
 								<div className="corses_title">
 									Programming courses
 								</div>
-								<div class="btn__filter">
+								<Slider {...sliderSettings}>
 									<a
 										onClick={(e) =>
 											handleChangeCategory(e, "Python")
@@ -51,7 +63,7 @@ function AllCourses() {
 										href="/"
 										className="courses_btn csbtn"
 										title="Python">
-										<img src="https://itproger.com/img/spravka/python.svg"></img>
+										<img src="https://itproger.com/img/spravka/python.svg" />
 									</a>
 									<a
 										onClick={(e) =>
@@ -61,7 +73,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/java.svg"
-											title="Java"></img>
+											title="Java"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -71,7 +84,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/cpp.svg"
-											title="С++"></img>
+											title="С++"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -81,7 +95,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/csharp.svg"
-											title="C#"></img>
+											title="C#"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -91,7 +106,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/php.svg"
-											title="PHP"></img>
+											title="PHP"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -101,7 +117,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/javascript.svg"
-											title="JavaScript"></img>
+											title="JavaScript"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -111,7 +128,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/css.svg"
-											title="CSS"></img>
+											title="CSS"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -121,7 +139,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://itproger.com/img/spravka/html.svg"
-											title="Html"></img>
+											title="Html"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -131,7 +150,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://i.ibb.co/fGJvjN4/swift.png"
-											title="Swift"></img>
+											title="Swift"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -141,7 +161,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://i.ibb.co/SJ9Csn0/ruby-1.png"
-											title="Ruby"></img>
+											title="Ruby"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -151,7 +172,8 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://i.ibb.co/S7WNZTB/go.png"
-											title="Go"></img>
+											title="Go"
+										/>
 									</a>
 									<a
 										onClick={(e) =>
@@ -161,14 +183,14 @@ function AllCourses() {
 										className="courses_btn csbtn">
 										<img
 											src="https://cdn.iconscout.com/icon/premium/png-512-thumb/other-1995801-1686737.png"
-											title="All"></img>
+											title="All"
+										/>
 									</a>
-								</div>
+								</Slider>
 							</div>
 							<div class="slider"></div>
 							<div class="video">
 								{courses.map((course, index) =>
-									
 									categoryVideo === course.category ? (
 										<div
 											class="video_intro"
