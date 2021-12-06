@@ -59,6 +59,20 @@ nav ul li a:hover {
 	color: rgb(138, 138, 138);
 }
 
+nav.stroke ul li:last-child a {
+	padding: 10px 0;
+}
+
+nav.stroke ul li:last-child a i {
+	font-size: 23px;
+}
+
+nav.stroke ul li:last-child a img {
+	border-radius: 50%;
+	max-width: 30px;
+	margin-bottom: 5px;
+}
+
 nav.stroke ul li a,
 nav.fill ul li a {
 	position: relative;
