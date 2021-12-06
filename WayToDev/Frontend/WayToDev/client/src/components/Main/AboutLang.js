@@ -36,7 +36,7 @@ function AboutLang() {
 				<Link
 					to="myBaner"
 					className="scrollDown reverse"
-					offset={-85}
+					offset={-95}
 					spy={true}
 					smooth={true}
 					duration={500}>
