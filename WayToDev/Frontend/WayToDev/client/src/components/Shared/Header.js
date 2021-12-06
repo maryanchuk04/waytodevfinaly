@@ -12,7 +12,6 @@ function Header() {
 
 	useEffect(() => {
 		if (window.location.pathname === "/") {
-			const header = document.getElementById("myHeader");
 			const sticky = window.innerHeight;
 			const scrollCallBack = window.addEventListener("scroll", () => {
 				if (window.pageYOffset > sticky) {
@@ -28,7 +27,11 @@ function Header() {
 	}, [navigate]);
 
 	return (
-		<header className={`header ${isSticky ? " sticky" : ""}`} id="myHeader">
+		<header
+			className={`header ${
+				isSticky && window.location.pathname === "/" ? " sticky" : ""
+			}`}
+			id="myHeader">
 			<div class="header-container">
 				<div class="logo">
 					<Link to="/"> WayToDev </Link>
