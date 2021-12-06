@@ -49,7 +49,7 @@ export const DEVS_INFO = [
 	},
 	{
 		name: "Volodumur Romanyuk",
-		position: "Front-end/DB Tech",
+		position: "Front-end/Data Science Dev",
 		description:
 			"I was born in Ukraine  and live Myhove and Chernivtci. <br>I have been programming for 4 years. <br>I want to work as a web developer. <br>I believe in the bright future of Ukraine and its prosperity",
 		birthday: "15th April 2003",
@@ -65,9 +65,9 @@ export const DEVS_INFO = [
 	},
 	{
 		name: "Nazar Lakusta",
-		position: "Data Science Tech",
+		position: "Data Science Dev",
 		description:
-			"I was born and live in Shipintsy. <br>I've been programming about four years already. <br>My dream is to become a qualified Java programmer and work with him in Ukraine.",
+			"I was born and live in Shipintsy. <br>I've been programming about four years already. <br>My dream is to become a qualified Java programmer and work with it in Ukraine.",
 		birthday: "17th October 2003",
 		phone: "+38 (095) 767 38 02",
 		email: "nazarlakusta0303@gmail.com",
