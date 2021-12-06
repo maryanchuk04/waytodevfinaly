@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
 	const [isSticky, setSticky] = useState(false);
 	const navigate = useNavigate();
+	const userData = useSelector((state) => state);
 
 	useEffect(() => {
 		if (window.location.pathname === "/") {
@@ -45,9 +47,24 @@ function Header() {
 						<li>
 							<Link to="/contacts">Contacts</Link>
 						</li>
-						<li>
-							<Link to="/login">Log in</Link>
-						</li>
+						{userData.access_token !== "" ? (
+							<li>
+								<Link to="/profile">
+									{userData.picture === null ? (
+										<i class="fas fa-user-circle"></i>
+									) : (
+										<img
+											src={userData.picture}
+											alt={userData.name}
+										/>
+									)}
+								</Link>
+							</li>
+						) : (
+							<li>
+								<Link to="/login">Log in</Link>
+							</li>
+						)}
 					</ul>
 				</nav>
 			</div>

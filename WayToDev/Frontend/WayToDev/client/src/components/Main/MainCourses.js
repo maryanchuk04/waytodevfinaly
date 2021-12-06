@@ -78,7 +78,7 @@ function MainCourses() {
 							className="scrollDown"
 							spy={true}
 							smooth={true}
-							offset={100}
+							offset={-80}
 							duration={500}>
 							<span></span>
 						</Link>

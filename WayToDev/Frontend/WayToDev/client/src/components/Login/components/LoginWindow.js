@@ -28,16 +28,26 @@ function LoginWindow() {
 				password: signInData.password,
 			})
 			.then((result) => {
-				console.log(result);
-				dispatch(
-					setUser({
-						_Id: result.data.user_id,
-						email: signInData.email,
-						password: signInData.password,
-						access_token: result.data.access_token,
+				axios
+					.get(
+						`https://waytodev.azurewebsites.net/user/${result.data.user_id}`
+					)
+					.then((data) => {
+						console.log(data);
+						dispatch(
+							setUser({
+								_Id: result.data.user_id,
+								email: signInData.email,
+								password: signInData.password,
+								access_token: result.data.access_token,
+								picture: data.data.picture,
+							})
+						);
+						navigate("/profile");
 					})
-				);
-				navigate("/profile");
+					.catch((err) => {
+						console.log(err);
+					});
 			})
 			.catch((err) => {
 				console.log(err);
@@ -74,10 +84,10 @@ function LoginWindow() {
 					<div className="form-container sign-in-container">
 						<form action="#">
 							<h1>Sign IN</h1>
-							
+
 							<div className="social-container">
-								<LoginG/>
-								<a href="#" className="social">				
+								<LoginG />
+								<a href="#" className="social">
 									<i className="fab fa-facebook-f"></i>
 								</a>
 								<a href="#" className="social">

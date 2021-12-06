@@ -61,6 +61,7 @@ function NewPosts() {
 					className="scrollDown"
 					spy={true}
 					smooth={true}
+					offset={-80}
 					duration={500}>
 					<span></span>
 				</LinkScroll>
