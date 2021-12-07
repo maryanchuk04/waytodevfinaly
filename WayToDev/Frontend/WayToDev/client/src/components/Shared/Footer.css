@@ -37,6 +37,7 @@ footer p {
 
 .footer_ul_amrc li a { 
     color:#CCC !important;
+    cursor: pointer;
 }
 
 .footer_ul_amrc li a:hover { 

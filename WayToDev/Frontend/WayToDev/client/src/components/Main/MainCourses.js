@@ -29,7 +29,7 @@ function MainCourses() {
 
 	return (
 		<>
-			<div className="mainCourses">
+			<div className="mainCourses" id="courses">
 				<div className="corses">
 					<div className="container">
 						<div className="courses_header">
