@@ -39,7 +39,8 @@
 
 .book_intro{
 	display: flex;
-    background: #333868;
+	background: rgb(84,51,255);
+	background: linear-gradient(90deg, rgba(84,51,255,1) 0%, rgba(15,12,41,1) 0%, rgba(96,91,158,1) 50%, rgba(36,36,62,1) 100%);
 	position: relative;
 	border-radius: 20px ;
 	box-shadow: black;
@@ -50,7 +51,10 @@
 	padding-right: 25px;
 	padding-top: 50px;
 	display: block;
-
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background: rgb(84,51,255);
+background: linear-gradient(40deg, rgba(84,51,255,1) 0%, rgba(0,70,127,1) 0%, rgba(165,204,130,1) 100%);
 }
 .book img{
 	border-top-left-radius: 20px;
