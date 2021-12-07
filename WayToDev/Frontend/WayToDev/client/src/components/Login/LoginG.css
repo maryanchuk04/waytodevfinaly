@@ -1,0 +1,18 @@
+.loginG > button {
+	box-shadow: none !important;
+	border: 1px solid #dddddd !important;
+	border-radius: 50% !important;
+	overflow: auto !important;
+	width: 42px;
+	display: flex !important;
+	justify-content: center !important;
+	margin: 0 auto;
+}
+
+.loginG > button > span {
+	display: none;
+}
+
+.loginG > button > div {
+	margin: 0 !important;
+}
