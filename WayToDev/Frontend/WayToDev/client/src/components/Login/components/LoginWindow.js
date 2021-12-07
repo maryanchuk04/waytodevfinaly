@@ -87,15 +87,6 @@ function LoginWindow() {
 
 							<div className="social-container">
 								<LoginG />
-								<a href="#" className="social">
-									<i className="fab fa-facebook-f"></i>
-								</a>
-								<a href="#" className="social">
-									<i className="fab fa-google-plus-g"></i>
-								</a>
-								<a href="#" className="social">
-									<i className="fab fa-linkedin-in"></i>
-								</a>
 							</div>
 							<span>or use your account</span>
 							<input
