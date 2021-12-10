@@ -23,14 +23,14 @@ function LoginWindow() {
 	const handleSignIn = (e) => {
 		e.preventDefault();
 		axios
-			.post(`https://waytodev.azurewebsites.net/user/login`, {
+			.post(`http://waytodev.somee.com/user/login`, {
 				Email: signInData.email,
 				password: signInData.password,
 			})
 			.then((result) => {
 				axios
 					.get(
-						`https://waytodev.azurewebsites.net/user/${result.data.user_id}`
+						`http://waytodev.somee.com/user/${result.data.user_id}`
 					)
 					.then((data) => {
 						console.log(data);
