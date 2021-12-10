@@ -1,16 +1,21 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-import "./LoginWindow.css";
-import { useSelector, useDispatch } from "react-redux";
-import { setUser } from "../../../redux/actions.js";
-import { useNavigate } from "react-router-dom";
-import LoginG from "../LoginG.js";
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import './LoginWindow.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { setUser } from '../../../redux/actions.js';
+import { useNavigate } from 'react-router-dom';
+import LoginG from '../LoginG.js';
 
 function LoginWindow() {
 	const [signInUp, setSignInUp] = useState(false);
 	const [signInData, setSignInData] = useState({
-		email: "",
-		password: "",
+		email: '',
+		password: '',
+	});
+	const [signUpData, setSignUpData] = useState({
+		name: '',
+		email: '',
+		password: '',
 	});
 	const userData = useSelector((state) => state);
 	const dispatch = useDispatch();
@@ -43,7 +48,43 @@ function LoginWindow() {
 								picture: data.data.picture,
 							})
 						);
-						navigate("/profile");
+						navigate('/profile');
+					})
+					.catch((err) => {
+						console.log(err);
+					});
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	};
+
+	const handleSignUp = (e) => {
+		e.preventDefault();
+		axios
+			.post(`http://waytodev.somee.com/user/registr`, {
+				Name: signUpData.name,
+				Email: signUpData.email,
+				password: signUpData.password,
+			})
+			.then((result) => {
+				console.log(result);
+				axios
+					.get(
+						`http://waytodev.somee.com/user/${result.data.user_id}`
+					)
+					.then((data) => {
+						console.log(data);
+						dispatch(
+							setUser({
+								_Id: result.data.user_id,
+								email: signUpData.email,
+								password: signUpData.password,
+								access_token: result.data.access_token,
+								picture: data.data.picture,
+							})
+						);
+						navigate('/profile');
 					})
 					.catch((err) => {
 						console.log(err);
@@ -58,27 +99,48 @@ function LoginWindow() {
 		<div>
 			<div className="allcomponents">
 				<div
-					className={`container ${signInUp && "right-panel-active"}`}
+					className={`container ${signInUp && 'right-panel-active'}`}
 					id="container">
 					<div className="form-container sign-up-container">
 						<form action="#">
 							<h1>Create Account</h1>
 							<div className="social-container">
-								<a href="#" className="social">
-									<i className="fab fa-facebook-f"></i>
-								</a>
-								<a href="#" className="social">
-									<i className="fab fa-google-plus-g"></i>
-								</a>
-								<a href="#" className="social">
-									<i className="fab fa-linkedin-in"></i>
-								</a>
+								<LoginG />
 							</div>
 							<span>or use your email for registration</span>
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email" />
-							<input type="password" placeholder="Password" />
-							<button>Sign UP</button>
+							<input
+								type="text"
+								placeholder="Name"
+								onChange={(e) =>
+									setSignUpData({
+										...signUpData,
+										name: e.target.value,
+									})
+								}
+							/>
+							<input
+								type="email"
+								placeholder="Email"
+								onChange={(e) =>
+									setSignUpData({
+										...signUpData,
+										email: e.target.value,
+									})
+								}
+							/>
+							<input
+								type="password"
+								placeholder="Password"
+								onChange={(e) =>
+									setSignUpData({
+										...signUpData,
+										password: e.target.value,
+									})
+								}
+							/>
+							<button onClick={(e) => handleSignUp(e)}>
+								Sign UP
+							</button>
 						</form>
 					</div>
 					<div className="form-container sign-in-container">
