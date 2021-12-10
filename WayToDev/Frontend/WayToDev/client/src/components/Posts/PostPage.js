@@ -15,7 +15,7 @@ function PostPage() {
 
 	useEffect(() => {
 		axios
-			.get(`https://waytodev.azurewebsites.net/post/id/${id}`)
+			.get(`http://waytodev.somee.com/post/id/${id}`)
 			.then((result) => {
 				console.log(result);
 				if (result.data) {
@@ -37,7 +37,7 @@ function PostPage() {
 		console.log(id);
 		userData._Id !== "" &&
 			axios
-				.post(`https://waytodev.azurewebsites.net/post/like`, {
+				.post(`http://waytodev.somee.com/post/like`, {
 					post_id: id,
 					IsLike: !likeState.active,
 					user_id: userData._Id,

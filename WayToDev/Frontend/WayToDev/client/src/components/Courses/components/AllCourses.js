@@ -23,7 +23,7 @@ function AllCourses() {
 
 	useEffect(() => {
 		axios
-			.get("https://waytodev.azurewebsites.net/courses")
+			.get("http://waytodev.somee.com/courses")
 			.then((result) => {
 				console.log(result.data);
 				setCourses(result.data);

@@ -7,7 +7,7 @@ function AllBooks() {
 
 	useEffect(() => {
 		axios
-			.get("https://waytodev.azurewebsites.net/book")
+			.get("http://waytodev.somee.com/book")
 			.then((result) => {
 				console.log(result.data);
 				setBooks(result.data);
