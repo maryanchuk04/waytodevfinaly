@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./PostPage.css";
+import ErrorComponent from "../Shared/Error";
 
 function PostPage() {
 	const [postInfo, setPostInfo] = useState({});
@@ -68,6 +69,8 @@ function PostPage() {
 					</div>
 				</div>
 			</div>
+
+			<ErrorComponent/>
 
 			<div className="container postInfoContainer">
 				<h4>{postInfo.name_user}</h4>
