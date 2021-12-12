@@ -1,21 +1,21 @@
-import React from "react";
-import "./App.css";
-import Header from "./components/Shared/Header.js";
-import MainBaner from "./components/Main/MainBaner.js";
-import MainCourses from "./components/Main/MainCourses.js";
-import NewPosts from "./components/Main/NewPosts.js";
-import Social from "./components/Main/Social";
-import Footer from "./components/Shared/Footer.js";
-import AboutLang from "./components/Main/AboutLang";
-import PostsPage from "./components/Posts/PostsPage.js";
-import PostPage from "./components/Posts/PostPage.js";
-import CoursesPage from "./components/Courses/CoursesPage.js";
-import BooksPage from "./components/Books/BooksPage.js";
-import Login from "./components/Login/Login.js";
-import Contacts from "./components/Contacts/Contacts.js";
-import Languages from "./components/Languages/Languages.js";
-import Profile from "./components/Profile/Profile.js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
+import './App.css';
+import Header from './components/Shared/Header.js';
+import MainBaner from './components/Main/MainBaner.js';
+import MainCourses from './components/Main/MainCourses.js';
+import NewPosts from './components/Main/NewPosts.js';
+import Social from './components/Main/Social';
+import Footer from './components/Shared/Footer.js';
+import AboutLang from './components/Main/AboutLang';
+import PostsPage from './components/Posts/PostsPage.js';
+import PostPage from './components/Posts/PostPage.js';
+import CoursesPage from './components/Courses/CoursesPage.js';
+import BooksPage from './components/Books/BooksPage.js';
+import Login from './components/Login/Login.js';
+import Contacts from './components/Contacts/Contacts.js';
+import Languages from './components/Languages/Languages.js';
+import Profile from './components/Profile/Profile.js';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
 	return (
 		<div className="app">
@@ -42,15 +42,15 @@ function App() {
 
 					<Route path="/courses" exact element={<CoursesPage />} />
 
-					<Route path="/books" element={<BooksPage />} />
+					<Route path="/books" exact element={<BooksPage />} />
 
-					<Route path="/login" element={<Login />} />
+					<Route path="/login" exact element={<Login />} />
 
-					<Route path="/contacts" element={<Contacts />} />
+					<Route path="/contacts" exact element={<Contacts />} />
 
-					<Route path="/languages" element={<Languages />} />
+					<Route path="/languages" exact element={<Languages />} />
 
-					<Route path="/profile" element={<Profile />} />
+					<Route path="/profile" exact element={<Profile />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

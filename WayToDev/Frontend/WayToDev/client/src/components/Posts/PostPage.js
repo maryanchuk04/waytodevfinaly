@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
-import "./PostPage.css";
-import ErrorComponent from "../Shared/Error";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import './PostPage.css';
+import AuthError from '../Shared/Error';
 
 function PostPage() {
 	const [postInfo, setPostInfo] = useState({});
@@ -13,44 +13,46 @@ function PostPage() {
 	});
 	const { id } = useParams();
 	const userData = useSelector((state) => state);
+	const [showError, setShowError] = useState(false);
 
 	useEffect(() => {
-		axios
-			.get(`http://waytodev.somee.com/post/id/${id}`)
-			.then((result) => {
-				console.log(result);
-				if (result.data) {
-					setPostInfo(result.data);
-					setLikeState({
-						active: result.data.like.some(
-							(elem) => elem.user_id === userData._Id
-						),
-						count: result.data.like.length,
-					});
-				}
-			});
+		setShowError(false);
+
+		axios.get(`http://waytodev.somee.com/post/id/${id}`).then((result) => {
+			console.log(result);
+			if (result.data) {
+				setPostInfo(result.data);
+				setLikeState({
+					active: result.data.like.some(
+						(elem) => elem.user_id === userData._Id
+					),
+					count: result.data.like.length,
+				});
+			}
+		});
 		console.log(userData);
-		console.log(localStorage.getItem("access_token"));
+		console.log(localStorage.getItem('access_token'));
 	}, []);
 
 	const handleLike = () => {
 		console.log(userData);
 		console.log(id);
-		userData._Id !== "" &&
-			axios
-				.post(`http://waytodev.somee.com/post/like`, {
-					post_id: id,
-					IsLike: !likeState.active,
-					user_id: userData._Id,
-				})
-				.then((result) => {
-					console.log(result);
-					likeState.count !== result.data.count &&
-						setLikeState({
-							count: result.data.count,
-							active: !likeState.active,
-						});
-				});
+		userData._Id !== ''
+			? axios
+					.post(`http://waytodev.somee.com/post/like`, {
+						post_id: id,
+						IsLike: !likeState.active,
+						user_id: userData._Id,
+					})
+					.then((result) => {
+						console.log(result);
+						likeState.count !== result.data.count &&
+							setLikeState({
+								count: result.data.count,
+								active: !likeState.active,
+							});
+					})
+			: setShowError(true);
 	};
 
 	return (
@@ -63,14 +65,14 @@ function PostPage() {
 					<div className="postInfoLikes" onClick={() => handleLike()}>
 						<div
 							className={`heart ${
-								likeState.active ? "is-active" : ""
+								likeState.active ? 'is-active' : ''
 							}`}></div>
 						{likeState.count}
 					</div>
 				</div>
 			</div>
 
-			<ErrorComponent/>
+			{showError && <AuthError />}
 
 			<div className="container postInfoContainer">
 				<h4>{postInfo.name_user}</h4>
