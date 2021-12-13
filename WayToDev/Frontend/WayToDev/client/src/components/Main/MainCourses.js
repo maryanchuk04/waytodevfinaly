@@ -3,6 +3,7 @@ import "./MainCourses.css";
 import axios from "axios";
 import MainVideoPopup from "./MainVideoPopup.js";
 import { Link } from "react-scroll";
+import FoundError from "../Shared/FoundError.js";
 
 function MainCourses() {
 	const [courses, setCourses] = useState([]);
@@ -30,6 +31,7 @@ function MainCourses() {
 	return (
 		<>
 			<div className="mainCourses" id="courses">
+			<FoundError/>
 				<div className="corses">
 					<div className="container">
 						<div className="courses_header">

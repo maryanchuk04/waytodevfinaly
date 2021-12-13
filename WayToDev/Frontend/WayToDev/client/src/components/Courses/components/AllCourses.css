@@ -207,3 +207,36 @@
 		transform: scale(1);
 	}
 }
+
+@media (max-width: 769px) {
+
+	.allCourses .slick-track a {
+		margin: 0;
+		padding-left: 0;
+	}
+
+	.allCourses .video {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.video_playbtn {
+		bottom: 110%;
+	}
+}
+
+@media (max-width: 426px) {
+
+	.allCourses .slick-track a {
+		margin: 0;
+		padding: 0;
+	}
+
+	.allCourses .video {
+		grid-template-columns: 1fr;
+	}
+
+	.allCourses .corses_title {
+		font-size: 35px;
+	}
+
+}
