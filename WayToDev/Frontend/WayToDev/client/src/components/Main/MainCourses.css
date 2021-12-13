@@ -200,3 +200,86 @@
 		transform: rotate(-45deg) translate(0, 0);
 	}
 }
+
+@media (max-width: 1025px) {
+
+	.corses {
+		padding-bottom: 100px;
+	}	
+
+	.mainCourses .corses .scrollDown span {
+		left: 3;
+		right: 550px;
+		top: 130px;
+	}
+}
+
+@media (max-width: 769px) {
+
+	.mainCourses .video {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.mainCourses .video_intro img {
+		height: 200px;
+	}
+
+	.mainCourses .video_intro:nth-child(5n - 4) img {
+		height: 200px;
+	}
+
+	.mainCourses .video_playbtn {
+		bottom: 115%;
+	}
+
+	.mainCourses .corses .scrollDown span {
+		left: 3;
+		right: 420px;
+		top: 130px;
+	}
+
+}
+
+@media (max-width: 426px) {
+
+	.mainCourses .video_intro img {
+		height: 250px;
+	}
+
+	.mainCourses .video_intro:nth-child(5n - 4) img {
+		height: 250px;
+	}
+
+	.mainCourses .video {
+		grid-template-columns: 1fr;
+	}
+
+	.mainCourses .video_intro {
+		margin-bottom: 40px;
+	}
+
+	.mainCourses .corses .scrollDown span {
+		left: 3;
+		right: 250px;
+		top: 130px;
+	}
+
+	.mainCourses .courses_header {
+		display: block;
+	}
+
+	.mainCourses .courses_header .csbtn {
+		margin: 30px 0;
+	}
+
+}
+
+@media (max-width: 376px) {
+
+	.mainCourses .corses .scrollDown span {
+		margin-top: 20px;
+		left: 3;
+		right: 190px;
+	}
+
+}

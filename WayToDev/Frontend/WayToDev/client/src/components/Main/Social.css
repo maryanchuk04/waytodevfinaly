@@ -141,6 +141,16 @@
 
 .subscribe {
 	display: flex;
+	width: 100%;
+}
+
+.subscribe__tous {
+	width: 60%;
+}
+
+.subscribe__tous h1{
+	margin: 0;
+	padding-top: 50px;
 }
 
 .feedback {
@@ -198,13 +208,13 @@
 .socials input[class="super-happy"]:hover + svg,
 .socials input[class="super-happy"]:checked + svg,
 .socials input[class="super-happy"]:focus + svg {
-	fill: rgb(0, 109, 217);
+	fill: rgb(0, 204, 79);
 }
 
 .socials input[class="happy"]:hover + svg,
 .socials input[class="happy"]:checked + svg,
 .socials input[class="happy"]:focus + svg {
-	fill: rgb(0, 204, 79);
+	fill: rgb(0, 109, 217);
 }
 
 .socials input[class="neutral"]:hover + svg,
@@ -454,3 +464,62 @@ input {
 		padding: 0;
 	}
 }
+
+@media (max-width: 1025px) {
+	.rating {
+		margin-left: 0;
+	}
+
+	.rating-text p {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 769px) {
+	.subscribe__tous p{
+		width: 90%;
+	}
+
+	.icon{
+		font-size: 10px;
+	}
+
+	.subscribe {
+		display: block;
+	}
+
+	.feedback {
+		margin: 0;
+		padding-bottom: 40px;
+	}
+
+	.subscribe__tous {
+		width: 100%;
+	}
+
+	.social_links .wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+}
+
+	@media (max-width: 426px) {
+
+		.wrapper {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.wrapper .button {
+			
+			margin-bottom: 20px;
+		}
+
+		.wrapper .icon {
+			width: fit-content;
+		}
+}
+
+
