@@ -156,3 +156,71 @@
 		transform: rotate(-45deg) translate(0, 0);
 	}
 }
+
+@media (max-width: 1025px) {
+	.text_title h1 {
+		font-size: 40px;
+	}
+
+	.language_btn {
+		margin-top: 20px;
+		margin-bottom: 70px;
+	}
+
+	.languages .scrollDown.reverse span {
+		left: 3;
+		right: 100px;
+	}
+}
+
+@media (max-width: 769px) {
+
+	.languages .container {
+		display: block;
+	}
+
+	.pictures img {
+		display: none;
+	}
+
+	.text {
+		width: 100%;
+		margin: 0;
+	}
+
+	.text_title h1 {
+		font-size: 35px;
+	}
+
+	.language_btn {
+		margin-top: 10px;
+	}
+
+	.languages .scrollDown.reverse span {
+		margin-top: 10px;
+		left: 3;
+		right: 400px;
+	}
+
+}
+
+@media (max-width: 426px) {
+
+	.languages .scrollDown.reverse span {
+		margin-top: 20px;
+		left: 3;
+		right: 240px;
+	}
+
+}
+
+@media (max-width: 376px) {
+
+	.languages .scrollDown.reverse span {
+		margin-top: 30px;
+		left: 3;
+		right: 220px;
+	}
+
+}
+
