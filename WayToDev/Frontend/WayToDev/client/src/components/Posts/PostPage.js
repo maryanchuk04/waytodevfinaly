@@ -8,7 +8,7 @@ import { current } from '@reduxjs/toolkit';
 
 function PostPage() {
 	const [dummyState, setDummyState] = useState(false);
-	const [currentComment, setCurrentComment] = useState(false);
+	const [currentComment, setCurrentComment] = useState('');
 	const [postInfo, setPostInfo] = useState({});
 	const [likeState, setLikeState] = useState({
 		count: 0,
