@@ -160,8 +160,35 @@
     }
 }
 
-@media (max-width:791px) {
+@media (max-width:769px) {
+
     .newPosts .postInfo {
         padding: 10px 15px;
+    }
+
+    .newPosts section>a {
+        width: 47%;
+    }
+
+    .newPosts .posts {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width:426px) {
+
+    .newPosts .postInfo {
+        padding: 10px 15px;
+    }
+
+    .newPosts section>a {
+        width: 99%;
+    }
+
+    .newPosts .posts {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
