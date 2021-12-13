@@ -15,7 +15,7 @@ function LoginG() {
 
 		axios
 			.post('http://waytodev.somee.com/user/registr', {
-				Name: response.profileObj.name,
+				Name: response.profileObj.givenName,
 				Email: response.profileObj.email,
 				picture: response.profileObj.imageUrl,
 			})
@@ -34,6 +34,7 @@ function LoginG() {
 								password: null,
 								access_token: result.data.access_token,
 								picture: data.data.picture,
+								name: response.profileObj.givenName,
 							})
 						);
 						navigate('/profile');

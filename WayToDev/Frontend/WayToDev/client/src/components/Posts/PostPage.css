@@ -37,7 +37,7 @@
 .postInfoLikes > .heart {
 	width: 100px;
 	height: 100px;
-	background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
+	background: url('https://cssanimation.rocks/images/posts/steps/heart.png')
 		no-repeat;
 	background-position: 0 0;
 	cursor: pointer;
@@ -74,4 +74,32 @@
 	border: none;
 	margin-left: 20px;
 	cursor: pointer;
+}
+
+.commentsContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.commentsContainer .comment {
+	display: flex;
+	margin-top: 50px;
+}
+
+.commentsContainer img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 30px;
+}
+
+.commentsContainer .commentInfo {
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	width: auto;
 }
