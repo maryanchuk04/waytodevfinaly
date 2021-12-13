@@ -5,6 +5,27 @@ import { useSelector } from 'react-redux';
 import './PostPage.css';
 import AuthError from '../Shared/Error';
 
+const commentsArr = [
+	{
+		picture:
+			'https://static.wikia.nocookie.net/286c608f-6b73-4e8a-a89f-fd5a3da764f2',
+		name: 'Naruto',
+		text: 'I will become hokage, you will see!',
+	},
+	{
+		picture:
+			'https://static2.cbrimages.com/wordpress/wp-content/uploads/2019/10/Sasuke-Uchiha-Rinnegan-Users.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5',
+		name: 'Sasuke',
+		text: 'Protect my friends and my village thats my prioraty now.',
+	},
+	{
+		picture:
+			'https://3dnews.ru/assets/external/illustrations/2020/11/10/1024969/01.jpg',
+		name: 'Spider man',
+		text: "Lets have some fun, and yeah I'm Spider man",
+	},
+];
+
 function PostPage() {
 	const [postInfo, setPostInfo] = useState({});
 	const [likeState, setLikeState] = useState({
@@ -17,6 +38,7 @@ function PostPage() {
 
 	useEffect(() => {
 		setShowError(false);
+		console.log(userData);
 
 		axios.get(`http://waytodev.somee.com/post/id/${id}`).then((result) => {
 			console.log(result);
@@ -55,6 +77,20 @@ function PostPage() {
 			: setShowError(true);
 	};
 
+	const handleSendComment = (e) => {
+		e.preventDefault();
+
+		axios
+			.post('http://waytodev.somee.com/post/comment', {
+				user_id: userData._Id,
+				post_Id: id,
+				text: 'test comment',
+			})
+			.then((result) => {
+				console.log(result);
+			});
+	};
+
 	return (
 		<div className="postPage">
 			<div className="container">
@@ -74,14 +110,31 @@ function PostPage() {
 
 			{showError && <AuthError />}
 
-			<div className="container postInfoContainer">
-				<h4>{postInfo.name_user}</h4>
-				<form>
-					<input type="text" placeholder="Your message..." />
-					<button type="submit">
-						<i class="fas fa-paper-plane"></i>
-					</button>
-				</form>
+			{userData._Id && (
+				<div className="container postInfoContainer">
+					<h4>{userData.name}</h4>
+					<form onSubmit={(e) => handleSendComment(e)}>
+						<input type="text" placeholder="Your message..." />
+						<button type="submit">
+							<i class="fas fa-paper-plane"></i>
+						</button>
+					</form>
+				</div>
+			)}
+
+			<div className="commentsContainer">
+				{commentsArr.map((comment) => (
+					<div className="comment">
+						<img
+							src={comment.picture}
+							alt={`${comment.name}'s picture`}
+						/>
+						<div className="commentInfo">
+							<h5>{comment.name}</h5>
+							{comment.text}
+						</div>
+					</div>
+				))}
 			</div>
 		</div>
 	);

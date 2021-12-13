@@ -46,6 +46,7 @@ function LoginWindow() {
 								password: signInData.password,
 								access_token: result.data.access_token,
 								picture: data.data.picture,
+								name: data.data.Name,
 							})
 						);
 						navigate('/profile');
@@ -82,6 +83,7 @@ function LoginWindow() {
 								password: signUpData.password,
 								access_token: result.data.access_token,
 								picture: data.data.picture,
+								name: signUpData.name,
 							})
 						);
 						navigate('/profile');
