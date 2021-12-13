@@ -4,29 +4,11 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './PostPage.css';
 import AuthError from '../Shared/Error';
-
-const commentsArr = [
-	{
-		picture:
-			'https://static.wikia.nocookie.net/286c608f-6b73-4e8a-a89f-fd5a3da764f2',
-		name: 'Naruto',
-		text: 'I will become hokage, you will see!',
-	},
-	{
-		picture:
-			'https://static2.cbrimages.com/wordpress/wp-content/uploads/2019/10/Sasuke-Uchiha-Rinnegan-Users.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5',
-		name: 'Sasuke',
-		text: 'Protect my friends and my village thats my prioraty now.',
-	},
-	{
-		picture:
-			'https://3dnews.ru/assets/external/illustrations/2020/11/10/1024969/01.jpg',
-		name: 'Spider man',
-		text: "Lets have some fun, and yeah I'm Spider man",
-	},
-];
+import { current } from '@reduxjs/toolkit';
 
 function PostPage() {
+	const [dummyState, setDummyState] = useState(false);
+	const [currentComment, setCurrentComment] = useState(false);
 	const [postInfo, setPostInfo] = useState({});
 	const [likeState, setLikeState] = useState({
 		count: 0,
@@ -42,19 +24,22 @@ function PostPage() {
 
 		axios.get(`http://waytodev.somee.com/post/id/${id}`).then((result) => {
 			console.log(result);
-			if (result.data) {
-				setPostInfo(result.data);
+			if (result.data.post) {
+				setPostInfo({
+					...result.data.post,
+					comment: result.data.post.comment.reverse(),
+				});
 				setLikeState({
-					active: result.data.like.some(
+					active: result.data.post.like.some(
 						(elem) => elem.user_id === userData._Id
 					),
-					count: result.data.like.length,
+					count: result.data.post.like.length,
 				});
 			}
 		});
 		console.log(userData);
 		console.log(localStorage.getItem('access_token'));
-	}, []);
+	}, [dummyState]);
 
 	const handleLike = () => {
 		console.log(userData);
@@ -84,10 +69,12 @@ function PostPage() {
 			.post('http://waytodev.somee.com/post/comment', {
 				user_id: userData._Id,
 				post_Id: id,
-				text: 'test comment',
+				text: currentComment,
 			})
 			.then((result) => {
 				console.log(result);
+				setDummyState(!dummyState);
+				setCurrentComment('');
 			});
 	};
 
@@ -114,7 +101,12 @@ function PostPage() {
 				<div className="container postInfoContainer">
 					<h4>{userData.name}</h4>
 					<form onSubmit={(e) => handleSendComment(e)}>
-						<input type="text" placeholder="Your message..." />
+						<input
+							type="text"
+							placeholder="Your message..."
+							onChange={(e) => setCurrentComment(e.target.value)}
+							value={currentComment}
+						/>
 						<button type="submit">
 							<i class="fas fa-paper-plane"></i>
 						</button>
@@ -123,14 +115,14 @@ function PostPage() {
 			)}
 
 			<div className="commentsContainer">
-				{commentsArr.map((comment) => (
+				{postInfo?.comment?.map((comment) => (
 					<div className="comment">
 						<img
-							src={comment.picture}
-							alt={`${comment.name}'s picture`}
+							src={comment.user.picture}
+							alt={`${comment.user.name}'s picture`}
 						/>
 						<div className="commentInfo">
-							<h5>{comment.name}</h5>
+							<h5>{comment.user.name}</h5>
 							{comment.text}
 						</div>
 					</div>

@@ -90,3 +90,45 @@
 	top: 0px;
 	z-index: 0;
 }
+
+@media (max-width: 1025px) {
+	.banerLeft > h1 {
+		font-size: 36px;
+	}
+
+	.banerLeft > p {
+		font-size: 20px;
+	}
+
+	.banerButton {
+		font-size: 10px;
+		padding: 10px 45px;
+	}
+}
+
+@media (max-width: 769px) {
+	.banerLeft > h1 {
+		font-size: 33px;
+	}
+
+	.banerLeft > p {
+		font-size: 17px;
+		margin: 20px 0;
+	}
+
+	.banerButton {
+		margin: 17px 0;
+	}
+}
+
+@media (max-width: 426px) {
+	.banerLeft {
+		width: 100%;
+	}
+}
+
+@media (max-width: 376px) {
+	.banerLeft > h1 {
+		font-size: 30px;
+	}
+}
