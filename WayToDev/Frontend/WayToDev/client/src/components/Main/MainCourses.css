@@ -258,6 +258,11 @@
 		margin-bottom: 40px;
 	}
 
+	.mainCourses .video_intro:nth-child(n+4) {
+		display: none;
+	}
+
+
 	.mainCourses .corses .scrollDown span {
 		left: 3;
 		right: 250px;
@@ -271,6 +276,8 @@
 	.mainCourses .courses_header .csbtn {
 		margin: 30px 0;
 	}
+
+
 
 }
 

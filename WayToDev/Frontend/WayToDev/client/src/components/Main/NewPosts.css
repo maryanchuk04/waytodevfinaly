@@ -187,6 +187,11 @@
         width: 99%;
     }
 
+    .newPosts section>a:nth-child(n+4)  {
+        display: none;
+        padding-bottom: 20px;
+    }
+
     .newPosts .posts {
         display: flex;
         flex-wrap: wrap;
