@@ -208,6 +208,15 @@
 	}
 }
 
+@media (max-width: 1025px) {
+
+	.allCourses .slick-track a {
+		margin: 5px;
+		padding-left: 0;
+	}	
+
+}
+
 @media (max-width: 769px) {
 
 	.allCourses .slick-track a {
@@ -228,7 +237,7 @@
 
 	.allCourses .slick-track a {
 		margin: 0;
-		padding: 0;
+		padding: 0 10px;
 	}
 
 	.allCourses .video {
@@ -237,6 +246,26 @@
 
 	.allCourses .corses_title {
 		font-size: 35px;
+	}
+
+}
+
+@media (max-width: 376px) {
+
+	.allCourses .slick-track a {
+		margin: 0;
+		padding: 0 10px;
+		margin-bottom: 30px;
+	}
+
+}
+
+@media (max-width: 321px) {
+
+	.allCourses .slick-track a {
+		margin: 0;
+		padding: 0 20px;
+		margin-bottom: 30px;
 	}
 
 }

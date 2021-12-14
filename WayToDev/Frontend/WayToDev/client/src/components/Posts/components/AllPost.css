@@ -65,3 +65,30 @@
 	font-size: 18px;
 	color: #7e7e7e;
 }
+
+
+@media (max-width:769px) {
+
+    .allPosts section a {
+        width: 47%;
+    }
+
+    .allPosts section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width:426px) {
+
+    .allPosts section a {
+        width: 99%;
+    }
+
+    .allPosts section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}

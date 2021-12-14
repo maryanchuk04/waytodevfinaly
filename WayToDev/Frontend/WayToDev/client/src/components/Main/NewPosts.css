@@ -158,6 +158,16 @@
     .newPosts .postInfo {
         padding: 10px 15px;
     }
+
+    .posts {
+        padding-bottom: 110px;
+    }
+
+    .newPosts .scrollDown span {
+		left: 3;
+		right: 550px;
+		top: 80px;
+	}
 }
 
 @media (max-width:769px) {
@@ -175,6 +185,12 @@
         flex-wrap: wrap;
     }
 
+    .newPosts .scrollDown span {
+		left: 3;
+		right: 410px;
+		top: 70px;
+	}
+
 }
 
 @media (max-width:426px) {
@@ -187,8 +203,48 @@
         width: 99%;
     }
 
+    .newPosts section>a:nth-child(n+4)  {
+        display: none;
+        padding-bottom: 20px;
+    }
+
     .newPosts .posts {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .newPosts .scrollDown span {
+		left: 3;
+		right: 250px;
+		top: 70px;
+	}
+}
+
+@media (max-width: 376px) {
+
+	.newPosts .scrollDown span {
+		top: 70px;
+		left: 3;
+		right: 220px;
+	}
+
+    .newPosts .header__posts {
+        display: block;
+    }
+
+    .newPosts .header__posts .csbtn {
+        margin: 0;
+        margin-bottom: 60px;
+    }
+
+}
+
+@media (max-width: 321px) {
+
+	.newPosts .scrollDown span  {
+		top: 60px;
+		left: 3;
+		right: 190px;
+	}
+
 }

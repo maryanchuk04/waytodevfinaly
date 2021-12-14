@@ -169,7 +169,8 @@
 
 	.languages .scrollDown.reverse span {
 		left: 3;
-		right: 100px;
+		right: 550px;
+		top: 90px;
 	}
 }
 
@@ -197,9 +198,9 @@
 	}
 
 	.languages .scrollDown.reverse span {
-		margin-top: 10px;
 		left: 3;
-		right: 400px;
+		right: 410px;
+		top: 90px;
 	}
 
 }
@@ -207,9 +208,9 @@
 @media (max-width: 426px) {
 
 	.languages .scrollDown.reverse span {
-		margin-top: 20px;
 		left: 3;
-		right: 240px;
+		right: 250px;
+		top: 90px;
 	}
 
 }
@@ -217,9 +218,19 @@
 @media (max-width: 376px) {
 
 	.languages .scrollDown.reverse span {
-		margin-top: 30px;
+		top: 90px;
 		left: 3;
 		right: 220px;
+	}
+
+}
+
+@media (max-width: 321px) {
+
+	.languages .scrollDown.reverse span {
+		top: 90px;
+		left: 3;
+		right: 190px;
 	}
 
 }
