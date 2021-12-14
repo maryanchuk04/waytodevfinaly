@@ -21,7 +21,7 @@ function AllCourses() {
 		draggable: false,
 		responsive: [
 			{ breakpoint: 320, settings: { slidesToShow: 3 } },
-			{ breakpoint: 425, settings: { slidesToShow: 5 } },
+			{ breakpoint: 426, settings: { slidesToShow: 5 } },
 		],
 	};
 

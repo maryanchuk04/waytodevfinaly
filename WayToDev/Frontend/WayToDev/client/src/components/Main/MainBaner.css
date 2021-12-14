@@ -125,6 +125,10 @@
 	.banerLeft {
 		width: 100%;
 	}
+
+	.banerGlobe {
+		display: none;
+	}
 }
 
 @media (max-width: 376px) {
