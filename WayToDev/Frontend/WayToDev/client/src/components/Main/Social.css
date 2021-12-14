@@ -320,6 +320,7 @@ input {
 
 .socials .background .screen-header-button.close {
 	background: #ed1c6f;
+	margin-top: 9.5px;
 }
 
 .socials .background .screen-header-button.maximize {
@@ -503,6 +504,11 @@ input {
 		justify-content: center;
 	}
 
+	.socials .background {
+		margin-left: -150px;
+
+	}
+
 }
 
 	@media (max-width: 426px) {
@@ -520,6 +526,19 @@ input {
 		.wrapper .icon {
 			width: fit-content;
 		}
+
+		
+		.socials .background {
+			height: 200px;
+		}
+
+		.socials .background .app-form-control {
+			height: 80px;
+		}
+
+		.socials .background .screen-body-item {
+			padding: top o;
+		}
 }
 
 
@@ -528,4 +547,4 @@ input {
 		.wrapper .button {
 			margin-left: 0;
 		}
-}
+} 
