@@ -16,6 +16,7 @@ import Contacts from './components/Contacts/Contacts.js';
 import Languages from './components/Languages/Languages.js';
 import Profile from './components/Profile/Profile.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import FoundError from './components/Shared/FoundError';
 function App() {
 	return (
 		<div className="app">
@@ -51,6 +52,8 @@ function App() {
 					<Route path="/languages" exact element={<Languages />} />
 
 					<Route path="/profile" exact element={<Profile />} />
+
+					<Route path="/*" exact element={<FoundError />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
