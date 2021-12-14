@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "./AllCourses.css";
-import MainVideoPopup from "../../Main/MainVideoPopup.js";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './AllCourses.css';
+import MainVideoPopup from '../../Main/MainVideoPopup.js';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function AllCourses() {
 	const [courses, setCourses] = useState([]);
-	const [currentVideoCode, setCurrentVideoCode] = useState("");
+	const [currentVideoCode, setCurrentVideoCode] = useState('');
 	const [showVideo, setShowVideo] = useState(false);
-	const [categoryVideo, setCategoryVideo] = useState("all");
+	const [categoryVideo, setCategoryVideo] = useState('all');
 	const sliderSettings = {
 		dots: true,
 		infinite: true,
@@ -19,15 +19,17 @@ function AllCourses() {
 		slidesToShow: 7,
 		slidesToScroll: 1,
 		draggable: false,
+		responsive: [
+			{ breakpoint: 320, settings: { slidesToShow: 3 } },
+			{ breakpoint: 425, settings: { slidesToShow: 5 } },
+		],
 	};
 
 	useEffect(() => {
-		axios
-			.get("http://waytodev.somee.com/courses")
-			.then((result) => {
-				console.log(result.data);
-				setCourses(result.data);
-			});
+		axios.get('http://waytodev.somee.com/courses').then((result) => {
+			console.log(result.data);
+			setCourses(result.data);
+		});
 	}, []);
 
 	const handleShowVideo = (videoCode) => {
@@ -58,7 +60,7 @@ function AllCourses() {
 								<Slider {...sliderSettings}>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Python")
+											handleChangeCategory(e, 'Python')
 										}
 										href="/"
 										className="courses_btn csbtn"
@@ -67,7 +69,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Java")
+											handleChangeCategory(e, 'Java')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -78,7 +80,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "C++")
+											handleChangeCategory(e, 'C++')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -89,7 +91,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "C#")
+											handleChangeCategory(e, 'C#')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -100,7 +102,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "PHP")
+											handleChangeCategory(e, 'PHP')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -111,7 +113,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "JS")
+											handleChangeCategory(e, 'JS')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -122,7 +124,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "CSS")
+											handleChangeCategory(e, 'CSS')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -133,7 +135,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "HTML")
+											handleChangeCategory(e, 'HTML')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -144,7 +146,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Swift")
+											handleChangeCategory(e, 'Swift')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -155,7 +157,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Ruby")
+											handleChangeCategory(e, 'Ruby')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -166,7 +168,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "Go")
+											handleChangeCategory(e, 'Go')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -177,7 +179,7 @@ function AllCourses() {
 									</a>
 									<a
 										onClick={(e) =>
-											handleChangeCategory(e, "all")
+											handleChangeCategory(e, 'all')
 										}
 										href="/"
 										className="courses_btn csbtn">
@@ -187,7 +189,6 @@ function AllCourses() {
 										/>
 									</a>
 								</Slider>
-								
 							</div>
 							<div class="slider"></div>
 							<div class="video">
@@ -198,12 +199,12 @@ function AllCourses() {
 											key={course._Id}
 											onClick={() =>
 												handleShowVideo(
-													course.link.split("v=")[1]
+													course.link.split('v=')[1]
 												)
 											}>
 											<img
 												src={`https://img.youtube.com/vi/${
-													course.link.split("v=")[1]
+													course.link.split('v=')[1]
 												}/0.jpg`}
 												alt={course.name_course}
 											/>
@@ -220,21 +221,21 @@ function AllCourses() {
 											</div>
 										</div>
 									) : (
-										categoryVideo === "all" && (
+										categoryVideo === 'all' && (
 											<div
 												class="video_intro"
 												key={course._Id}
 												onClick={() =>
 													handleShowVideo(
 														course.link.split(
-															"v="
+															'v='
 														)[1]
 													)
 												}>
 												<img
 													src={`https://img.youtube.com/vi/${
 														course.link.split(
-															"v="
+															'v='
 														)[1]
 													}/0.jpg`}
 													alt={course.name_course}
