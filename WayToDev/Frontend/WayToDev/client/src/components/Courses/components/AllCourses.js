@@ -187,6 +187,7 @@ function AllCourses() {
 										/>
 									</a>
 								</Slider>
+								
 							</div>
 							<div class="slider"></div>
 							<div class="video">
