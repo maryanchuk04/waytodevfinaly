@@ -20,7 +20,6 @@ function AllBooks() {
 					<div clasName="books">
 				<div classsName="books_header">
 						<div className="books_title"><h1>Programming books</h1></div>
-						<div className="books_subtitle">We recommend starting with:</div>
 					</div>
 					
                         
