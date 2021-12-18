@@ -38,6 +38,7 @@ function LoginG() {
 							})
 						);
 						navigate('/profile');
+						window.location.reload();
 					})
 					.catch((err) => {
 						console.log(err);

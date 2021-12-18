@@ -17,6 +17,8 @@ import Languages from './components/Languages/Languages.js';
 import Profile from './components/Profile/Profile.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FoundError from './components/Shared/FoundError';
+import AuthError from './components/Shared/Error';
+
 function App() {
 	return (
 		<div className="app">
@@ -27,31 +29,105 @@ function App() {
 						path="/"
 						exact
 						element={
-							<React.Fragment>
-								<MainBaner />
-								<MainCourses />
-								<NewPosts />
-								<Social />
-								<AboutLang />
-							</React.Fragment>
+							localStorage.getItem('userInfo') !== null ? (
+								<React.Fragment>
+									<MainBaner />
+									<MainCourses />
+									<NewPosts />
+									<Social />
+									<AboutLang />
+								</React.Fragment>
+							) : (
+								<AuthError />
+							)
 						}
 					/>
 
-					<Route path="/posts" exact element={<PostsPage />} />
+					<Route
+						path="/posts"
+						exact
+						element={
+							localStorage.getItem('userInfo') !== null ? (
+								<PostsPage />
+							) : (
+								<AuthError />
+							)
+						}
+					/>
 
-					<Route path="/posts/:id" exact element={<PostPage />} />
+					<Route
+						path="/posts/:id"
+						exact
+						element={
+							localStorage.getItem('userInfo') !== null ? (
+								<PostPage />
+							) : (
+								<AuthError />
+							)
+						}
+					/>
 
-					<Route path="/courses" exact element={<CoursesPage />} />
+					<Route
+						path="/courses"
+						exact
+						element={
+							localStorage.getItem('userInfo') !== null ? (
+								<CoursesPage />
+							) : (
+								<AuthError />
+							)
+						}
+					/>
 
-					<Route path="/books" exact element={<BooksPage />} />
+					<Route
+						path="/books"
+						exact
+						element={
+							localStorage.getItem('userInfo') !== null ? (
+								<BooksPage />
+							) : (
+								<AuthError />
+							)
+						}
+					/>
 
 					<Route path="/login" exact element={<Login />} />
 
-					<Route path="/contacts" exact element={<Contacts />} />
+					<Route
+						path="/contacts"
+						exact
+						element={
+							localStorage.getItem('userInfo') !== null ? (
+								<Contacts />
+							) : (
+								<AuthError />
+							)
+						}
+					/>
 
-					<Route path="/languages" exact element={<Languages />} />
+					<Route
+						path="/languages"
+						exact
+						element={
+							localStorage.getItem('userInfo') !== null ? (
+								<Languages />
+							) : (
+								<AuthError />
+							)
+						}
+					/>
 
-					<Route path="/profile" exact element={<Profile />} />
+					<Route
+						path="/profile"
+						exact
+						element={
+							localStorage.getItem('userInfo') !== null ? (
+								<Profile />
+							) : (
+								<AuthError />
+							)
+						}
+					/>
 
 					<Route path="/*" exact element={<FoundError />} />
 				</Routes>

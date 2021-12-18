@@ -50,6 +50,7 @@ function LoginWindow() {
 							})
 						);
 						navigate('/profile');
+						window.location.reload();
 					})
 					.catch((err) => {
 						console.log(err);
@@ -87,6 +88,7 @@ function LoginWindow() {
 							})
 						);
 						navigate('/profile');
+						window.location.reload();
 					})
 					.catch((err) => {
 						console.log(err);
