@@ -106,3 +106,26 @@
 	right: -60px;
 }
 
+@media (max-width: 767px) {
+	.contacts .click-track {
+		height: 500px;
+	}
+
+	.contactsFlex > img {
+		display: none;
+	}
+
+	.contactsInfo {
+		width: 100%;
+	}
+}
+
+@media (max-width: 426px) {
+	.contacts .click-track {
+		height: 500px;
+	}
+
+	.contactsInfo > h1 {
+		font-size: 30px;
+	}
+}

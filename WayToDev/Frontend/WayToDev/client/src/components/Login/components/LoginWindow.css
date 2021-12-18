@@ -219,23 +219,47 @@
 	width: 40px;
 }
 
-@media (max-width:1025px) {
-
+@media (max-width: 1025px) {
 	.allcomponents .container {
 		width: 80%;
 		margin-left: 40px;
 	}
-
 }
 
-@media (max-width:769px) {
-
+@media (max-width: 769px) {
+	.allcomponents {
+		width: auto;
+	}
 
 	.allcomponents .container {
-		margin-left: 20px;
+		margin-left: auto;
+		margin-right: auto;
 		width: 60%;
 		height: 600px;
 		margin-top: 100px;
 	}
 
+	.allcomponents .sign-in-container {
+		width: 100%;
+	}
+
+	.allcomponents .overlay-container {
+		display: none;
+	}
+}
+
+@media (max-width: 426px) {
+	.allcomponents {
+		height: auto;
+	}
+
+	.allcomponents .container {
+		width: 90%;
+		height: 450px;
+		margin-top: 0;
+	}
+
+	.allcomponents .sign-in-container {
+		width: 100%;
+	}
 }
