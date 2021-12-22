@@ -81,14 +81,14 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://www.facebook.com/ffrgd.ewexa"
+											href="https://www.facebook.com/"
 											target="_blank"
 											rel="noreferrer">
 											<i class="fab fa-facebook-f"></i>
 										</a>
 									</div>
 									<a
-										href="https://www.facebook.com/ffrgd.ewexa"
+										href="https://www.facebook.com/"
 										target="_blank"
 										rel="noreferrer">
 										<span class="icon_btn">Facebook</span>
@@ -97,7 +97,7 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://twitter.com/?lang=uk"
+											href="https://twitter.com/"
 											target="_blank "
 											rel="noreferrer">
 											{" "}
@@ -105,7 +105,7 @@ function Social() {
 										</a>
 									</div>
 									<a
-										href="https://twitter.com/?lang=uk"
+										href="https://twitter.com/"
 										target="_blank "
 										rel="noreferrer">
 										<span>Twitter</span>
@@ -114,14 +114,14 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://www.instagram.com/_maryanchukm_/"
+											href="https://www.instagram.com/"
 											target="_blank"
 											rel="noreferrer">
 											<i class="fab fa-instagram"></i>
 										</a>
 									</div>
 									<a
-										href="https://www.instagram.com/_maryanchukm_/"
+										href="https://www.instagram.com/"
 										target="_blank"
 										rel="noreferrer">
 										<span>Instagram</span>
@@ -162,14 +162,14 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://github.com/maryanchuk04"
+											href="https://github.com/"
 											target="_blank"
 											rel="noreferrer">
 											<i class="fab fa-github"></i>
 										</a>
 									</div>
 									<a
-										href="https://github.com/maryanchuk04"
+										href="https://github.com/"
 										target="_blank"
 										rel="noreferrer">
 										<span>GitHub</span>

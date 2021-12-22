@@ -25,9 +25,9 @@ function FoundError() {
 								<br />
 								<span class="orange">&lt;body&gt;</span>
 								<br />
-								ERROR 404! FILE NOT FOUND!
+								ERROR 404! PAGE NOT FOUND!
 								<span class="comment">
-									&lt;!--The file you are looking for, is not
+									&lt;!--The page you are looking for, is not
 									where you think it is.--&gt;
 								</span>
 								<span class="orange"></span>
