@@ -65,5 +65,27 @@ background: linear-gradient(40deg, rgba(84,51,255,1) 0%, rgba(0,70,127,1) 0%, rg
 	font-style:italic ;
 	font-weight: 900;
 }
+@media (max-width: 1025px) {
+
+	.book_text h1{
+		font-size:31px;
+		margin-bottom: 	3px;
+	}
+	.alltext{
+		padding-top: 30px;
+	}
+	.description{
+		font-size:15px;
+	}
+}
+@media (max-width: 769px) {
+      .image{
+		  display: none;
+	  }
+	  .alltext{
+		  border-radius:20px;
+		  padding-bottom: 40px;
+	  }
+}
 
   
