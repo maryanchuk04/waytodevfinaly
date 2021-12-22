@@ -70,9 +70,16 @@ function Footer() {
         Courses <
         /LinkScroll></li >
         <
-        li > < a href = "#" > Languages < /a></li >
+        li > < a href = "http://localhost:3000/profile" > Profile < /a></li >
         <
-        li > < a href = "" > Send a feedback < /a></li >
+        li > < LinkScroll to = "aboutlang"
+        className = "scrollDown"
+        spy = { true }
+        offset = {-50 }
+        smooth = { true }
+        duration = { 500 } >
+        Send a feedback <
+        /LinkScroll></li >
         <
         /ul>
 
@@ -124,10 +131,10 @@ function Footer() {
         <
         ul class = "social_footer_ul" >
         <
-        li > < a href = "/" > < i class = "fab fa-facebook-f" > < /i></a > < /li> <
-        li > < a href = "/" > < i class = "fab fa-twitter" > < /i></a > < /li> <
-        li > < a href = "/" > < i class = "fab fa-linkedin" > < /i></a > < /li> <
-        li > < a href = "/" > < i class = "fab fa-instagram" > < /i></a > < /li> <
+        li > < a href = "https://www.facebook.com/" target="_blank " > < i class = "fab fa-facebook-f" > < /i></a > < /li> <
+        li > < a href = "https://twitter.com/" target="_blank " > < i class = "fab fa-twitter" > < /i></a > < /li> <
+        li > < a href = "https://www.linkedin.com/" target="_blank " > < i class = "fab fa-linkedin" > < /i></a > < /li> <
+        li > < a href = "https://www.instagram.com/" target="_blank " > < i class = "fab fa-instagram" > < /i></a > < /li> <
         /ul>
 
         <
