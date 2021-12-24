@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { Link as LinkScroll } from "react-scroll";
+import   {Link } from "react-router-dom"
 
 function Footer() {
     return ( <div class = "footer" >
@@ -30,7 +31,7 @@ function Footer() {
         duration = { 500 } >
         Subscribe to us 
         </LinkScroll></li >
-        <li > < a href = "http://localhost:3000/books" > Books </a></li >
+        <li> < Link to = "/books" > Books </Link></li >
         </ul>
 
         </div>
@@ -47,7 +48,7 @@ function Footer() {
         duration = { 500 } >
         Courses 
         </LinkScroll></li >
-        <li > < a href = "http://localhost:3000/profile" > Profile </a></li >
+        <li > <Link to= "/profile" > Profile </Link></li >
         <li > < LinkScroll to = "aboutlang"
         className = "scrollDown"
         spy = { true }
@@ -77,10 +78,10 @@ function Footer() {
 
         <div class = "container" >
         <ul class = "foote_bottom_ul_amrc" >
-        <li > < a href = "http://localhost:3000/posts" > IT ARTICLES </a></li >
-        <li > < a href = "http://localhost:3000/courses" > COURSES </a></li >
-        <li > < a href = "http://localhost:3000/books" > BOOKS </a></li >
-        <li > < a href = "http://localhost:3000/contacts" > CONTACTS </a></li >
+        <li > <Link to = "/posts" > IT ARTICLES </Link></li >
+        <li > <Link to  = "/courses" > COURSES </Link></li >
+        <li > <Link to = "/books" > BOOKS </Link></li >
+        <li > <Link to = "/contacts" > CONTACTS </Link></li >
         </ul>
 
         <p class = "text-center" > WayToDev @2021 | Designed With by < a href = "/" > WayToDev </a></p >
