@@ -10,7 +10,6 @@ function Footer() {
         <div class = "row" >
         <div class = " col-sm-4 col-md col-sm-4  col-12 col" >
         <h5 class = "headin5_amrc col_white_amrc pt2" > About us </h5>
-
         <p class = "mb10" > WayToDev - The way to your future.Our team will help you to develope your way to IT - industry.So
         if you want to learn more, don 't forget to Sign-up.</p> 
         <p > < i class = "fa fa-phone" > </i>  +38 050 738 26 34 </p >
@@ -33,9 +32,7 @@ function Footer() {
         </LinkScroll></li >
         <li> < Link to = "/books" > Books </Link></li >
         </ul>
-
         </div>
-
 
         <div class = " col-sm-4 col-md  col-6 col" >
         <h5 class = "headin5_amrc col_white_amrc pt2  footer_ul_h" > Quick links </h5> 
