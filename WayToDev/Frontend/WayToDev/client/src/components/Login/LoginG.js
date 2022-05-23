@@ -41,8 +41,7 @@ function LoginG() {
 								address: data?.data?.address || "",
 							})
 						);
-						navigate('/profile');
-						window.location.reload();
+						window.location = '/profile';
 					})
 					.catch((err) => {
 						console.log(err);
