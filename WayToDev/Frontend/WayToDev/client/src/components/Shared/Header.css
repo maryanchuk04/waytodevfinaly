@@ -76,6 +76,9 @@ nav.stroke ul li:last-child a img {
 	border-radius: 50%;
 	max-width: 30px;
 	margin-bottom: 5px;
+	width: 28px;
+    height: 28px;
+	object-fit: cover;
 }
 
 nav.stroke ul li a,
@@ -183,6 +186,9 @@ nav.fill ul li a:hover:after {
 
 	nav.stroke ul li:last-child a img {
 		max-width: 25px;
+		width: 25px;
+    	height: 25px;
+		object-fit: cover;
 	}
 
 	.header-container .logo {

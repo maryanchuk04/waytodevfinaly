@@ -8,7 +8,7 @@ function NewPosts() {
 	const [posts, setPosts] = useState([]);
 
 	useEffect(() => {
-		axios.get("http://waytodev.somee.com/post").then((result) => {
+		axios.get("https://bsite.net/waytodev/post").then((result) => {
 			setPosts(result.data);
 		});
 	}, []);

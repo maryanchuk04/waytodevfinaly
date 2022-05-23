@@ -27,15 +27,17 @@ function LoginWindow() {
 
 	const handleSignIn = (e) => {
 		e.preventDefault();
+		signInData?.email.trim() !== '' &&
+		signInData?.password.trim() !== '' &&
 		axios
-			.post(`http://waytodev.somee.com/user/login`, {
+			.post(`https://bsite.net/waytodev/user/login`, {
 				Email: signInData.email,
 				password: signInData.password,
 			})
 			.then((result) => {
 				axios
 					.get(
-						`http://waytodev.somee.com/user/${result.data.user_id}`
+						`https://bsite.net/waytodev/user/${result.data.user_id}`
 					)
 					.then((data) => {
 						console.log(data);
@@ -46,7 +48,7 @@ function LoginWindow() {
 								password: signInData.password,
 								access_token: result.data.access_token,
 								picture: data.data.picture,
-								name: data.data.Name,
+								name: data?.data?.name,
 							})
 						);
 						navigate('/profile');
@@ -63,8 +65,11 @@ function LoginWindow() {
 
 	const handleSignUp = (e) => {
 		e.preventDefault();
+		signUpData?.name.trim() !== '' &&
+		signUpData?.email.trim() !== '' &&
+		signUpData?.password.trim() !== '' &&
 		axios
-			.post(`http://waytodev.somee.com/user/registr`, {
+			.post(`https://bsite.net/waytodev/user/registr`, {
 				Name: signUpData.name,
 				Email: signUpData.email,
 				password: signUpData.password,
@@ -73,7 +78,7 @@ function LoginWindow() {
 				console.log(result);
 				axios
 					.get(
-						`http://waytodev.somee.com/user/${result.data.user_id}`
+						`https://bsite.net/waytodev/user/${result.data.user_id}`
 					)
 					.then((data) => {
 						console.log(data);
@@ -106,7 +111,7 @@ function LoginWindow() {
 					className={`container ${signInUp && 'right-panel-active'}`}
 					id="container">
 					<div className="form-container sign-up-container">
-						<form action="#">
+						<form action="#" onSubmit={(e) => handleSignUp(e)}>
 							<h1>Create Account</h1>
 							<div className="social-container">
 								<LoginG />
@@ -142,13 +147,13 @@ function LoginWindow() {
 									})
 								}
 							/>
-							<button onClick={(e) => handleSignUp(e)}>
+							<button>
 								Sign UP
 							</button>
 						</form>
 					</div>
 					<div className="form-container sign-in-container">
-						<form action="#">
+						<form action="#" onSubmit={(e) => handleSignIn(e)}>
 							<h1>Sign IN</h1>
 
 							<div className="social-container">
@@ -175,9 +180,7 @@ function LoginWindow() {
 									})
 								}
 							/>
-							<button
-								type="submit"
-								onClick={(e) => handleSignIn(e)}>
+							<button type="submit">
 								Sign In
 							</button>
 						</form>

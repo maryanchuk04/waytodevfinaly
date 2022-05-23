@@ -20,33 +20,27 @@ function PostPage() {
 
 	useEffect(() => {
 		setShowError(false);
-		console.log(userData);
 
-		axios.get(`http://waytodev.somee.com/post/id/${id}`).then((result) => {
-			console.log(result);
-			if (result.data.post) {
+		axios.get(`https://bsite.net/waytodev/post/id/${id}`).then((result) => {
+			if (result?.data) {
 				setPostInfo({
-					...result.data.post,
-					comment: result.data.post.comment.reverse(),
+					...result?.data,
+					comment: result?.data?.comment?.reverse(),
 				});
 				setLikeState({
-					active: result.data.post.like.some(
+					active: result?.data?.like?.some(
 						(elem) => elem.user_id === userData._Id
 					),
-					count: result.data.post.like.length,
+					count: result?.data?.like?.length,
 				});
 			}
 		});
-		console.log(userData);
-		console.log(localStorage.getItem('access_token'));
 	}, [dummyState]);
 
 	const handleLike = () => {
-		console.log(userData);
-		console.log(id);
 		userData._Id !== ''
 			? axios
-					.post(`http://waytodev.somee.com/post/like`, {
+					.post(`https://bsite.net/waytodev/post/like`, {
 						post_id: id,
 						IsLike: !likeState.active,
 						user_id: userData._Id,
@@ -64,10 +58,15 @@ function PostPage() {
 
 	const handleSendComment = (e) => {
 		e.preventDefault();
-
+		console.log(userData);
 		axios
-			.post('http://waytodev.somee.com/post/comment', {
-				user_id: userData._Id,
+			.post('https://bsite.net/waytodev/post/comment', {
+				user: {
+					name: userData?.name,
+					email: userData?.email,
+					picture: userData?.picture,
+					_Id: userData?._Id,
+				},
 				post_Id: id,
 				text: currentComment,
 			})
@@ -97,32 +96,30 @@ function PostPage() {
 
 			{showError && <AuthError />}
 
-			{userData._Id && (
-				<div className="container postInfoContainer">
-					<h4>{userData.name}</h4>
-					<form onSubmit={(e) => handleSendComment(e)}>
-						<input
-							type="text"
-							placeholder="Your message..."
-							onChange={(e) => setCurrentComment(e.target.value)}
-							value={currentComment}
-						/>
-						<button type="submit">
-							<i class="fas fa-paper-plane"></i>
-						</button>
-					</form>
-				</div>
-			)}
+			<div className="container postInfoContainer">
+				<h4>{userData.name}</h4>
+				<form onSubmit={(e) => handleSendComment(e)}>
+					<input
+						type="text"
+						placeholder="Your message..."
+						onChange={(e) => setCurrentComment(e.target.value)}
+						value={currentComment}
+					/>
+					<button type="submit">
+						<i class="fas fa-paper-plane"></i>
+					</button>
+				</form>
+			</div>
 
 			<div className="commentsContainer">
 				{postInfo?.comment?.map((comment) => (
 					<div className="comment">
 						<img
-							src={comment.user.picture}
-							alt={`${comment.user.name}'s picture`}
+							src={comment?.user?.picture}
+							alt={`${comment?.user?.name}'s picture`}
 						/>
 						<div className="commentInfo">
-							<h5>{comment.user.name}</h5>
+							<h5>{comment?.user?.name}</h5>
 							{comment.text}
 						</div>
 					</div>

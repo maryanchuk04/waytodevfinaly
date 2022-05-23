@@ -1,12 +1,74 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './Profile.css';
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import { setUser } from '../../redux/actions';
+
+import axios from 'axios';
 
 function Profile() {
 	const userData = useSelector((state) => state);
-	console.log(userData);
+	const dispatch = useDispatch();
+	const [userInfo, setUserInfo] = useState({
+		name: userData?.name || '',
+		email: userData?.email || '',
+		phone: userData?.phone || '',
+		address: userData?.address || '',
+	});
+	const inputFile = useRef(null);
+
+	const handleAvatarChange = async (e) => {
+		const selectedFile = e.target.files[0];
+		const form = new FormData();
+
+		form.append("image", selectedFile);
+
+		const hostImgResult = await axios({
+			method: 'post',
+			url: 'https://api.imgbb.com/1/upload?&key=56b4d700a8a3259864f162c0cecca770',
+			data: form,
+			headers:  { "Content-Type": "multipart/form-data" },
+		})
+
+		const avatarUrl = hostImgResult?.data?.data?.url;
+
+		const result = await axios.post(`https://bsite.net/waytodev/user/ChangeAvatar/${userData?._Id}`, {
+			avatar: avatarUrl
+		});
+		
+		if (result.status == 200) {
+			dispatch(
+				setUser({
+					...userData,
+					picture: result?.data?.picture
+				})
+			);
+		}
+	};
+
+	const saveProfile = async () => {
+		const result = await axios.post(`https://bsite.net/waytodev/user/UpdateInfo/${userData?._Id}`, {
+			...userInfo,
+			picture: userData?.picture,
+		});
+
+		// change userData of redux with new data from result if there is no error
+		console.log(result);
+		console.log(userData);
+		if (result.status == 200) {
+			dispatch(
+				setUser({
+					...userData,
+					email: result?.data?.email || "",
+					name: result?.data?.name || "",
+					phone: result?.data?.phone || "",
+					address: result?.data?.address || "",
+				})
+			);
+		}
+	}
 
 	return (
 		<div className="profile">
@@ -17,15 +79,28 @@ function Profile() {
 							<div class="card">
 								<div class="card-body">
 									<div class="d-flex flex-column align-items-center text-center">
-										<img
-											src={userData?.picture}
-											alt={userData?.name}
-											class="rounded-circle p-1 bg-primary"></img>
+										{userData?.picture ?
+											(
+												<img
+													src={userData?.picture}
+													alt={userData?.name}
+													class="rounded-circle p-1 bg-primary"
+													onClick={() => inputFile.current.click()}
+												/>
+											) : <i class="fas fa-user-circle" onClick={() => inputFile.current.click()}></i>
+										}
 										<div class="mt-3">
 											<h4>{userData?.name}</h4>
 										</div>
+										<input
+											accept=".png, .jpg, .jpeg"
+											type='file'
+											id='file'
+											ref={inputFile}
+											style={{display: 'none'}}
+											onChange={(e) => handleAvatarChange(e)}
+										/>
 									</div>
-									<hr class="my-4"></hr>
 									<a
 										class="row"
 										href="/login"
@@ -46,7 +121,7 @@ function Profile() {
 						</div>
 						<div class="col-lg-8">
 							<div class="card">
-								<div class="card-body">
+								<form class="card-body">
 									<div class="row mb-3">
 										<div class="col-sm-3">
 											<h6 class="mb-0">Full Name</h6>
@@ -55,7 +130,9 @@ function Profile() {
 											<input
 												type="text"
 												class="form-control"
-												value={userData?.name}></input>
+												value={userInfo?.name}
+												autocomplete="off"
+												onChange={e => setUserInfo({...userInfo, name: e.target.value})}/>
 										</div>
 									</div>
 									<div class="row mb-3">
@@ -66,7 +143,9 @@ function Profile() {
 											<input
 												type="text"
 												class="form-control"
-												value={userData?.email}></input>
+												value={userInfo?.email}
+												autocomplete="off"
+												onChange={e => setUserInfo({...userInfo, email: e.target.value})}/>
 										</div>
 									</div>
 									<div class="row mb-3">
@@ -75,9 +154,14 @@ function Profile() {
 										</div>
 										<div class="col-sm-9 text-secondary">
 											<input
-												type="text"
+												type="tel"
 												class="form-control"
-												value={userData?.phone}></input>
+												value={userInfo?.phone}
+												pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+												minlength="13"
+    											maxlength="13"
+												autocomplete="off"
+												onChange={e => setUserInfo({...userInfo, phone: e.target.value})}></input>
 										</div>
 									</div>
 
@@ -89,9 +173,9 @@ function Profile() {
 											<input
 												type="text"
 												class="form-control"
-												value={
-													userData?.address
-												}></input>
+												value={userInfo?.address}
+												autocomplete="off"
+												onChange={e => setUserInfo({...userInfo, address: e.target.value})}/>
 										</div>
 									</div>
 									<div class="row">
@@ -100,10 +184,11 @@ function Profile() {
 											<input
 												type="button"
 												class="btn btn-primary px-4"
-												value="Save Changes"></input>
+												value="Save Changes"
+												onClick={() => saveProfile()}/>
 										</div>
 									</div>
-								</div>
+								</form>
 							</div>
 						</div>
 					</div>

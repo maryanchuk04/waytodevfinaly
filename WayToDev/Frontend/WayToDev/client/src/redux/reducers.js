@@ -8,6 +8,8 @@ let initState = JSON.parse(localStorage.getItem("userInfo")) || {
 	picture: null,
 	favourites: null,
 	access_token: "",
+	phone: "",
+	address: "",
 };
 
 console.log(localStorage.getItem("userInfo"));

@@ -12,7 +12,7 @@ function MainCourses() {
 
 	useEffect(() => {
 		axios
-			.get("http://waytodev.somee.com/courses")
+			.get("https://bsite.net/waytodev/courses")
 			.then((result) => {
 				console.log(result.data);
 				setCourses(result.data);

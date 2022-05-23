@@ -7,12 +7,17 @@ function AllBooks() {
 
 	useEffect(() => {
 		axios
-			.get("http://waytodev.somee.com/book")
+			.get("https://bsite.net/waytodev/book")
 			.then((result) => {
 				console.log(result.data);
-				setBooks(result.data);
+				setBooks(result.data.filter(book => book?.image != undefined));
 			});
 	}, []);
+
+	const handleImgError = (errorIndex) => {
+		setBooks(book.filter((book, index) => index != errorIndex));
+	};
+
 	return (
 		<div class="allBooks">
 			<div className="mainBooks">
@@ -29,7 +34,7 @@ function AllBooks() {
 								index < 20 && (
 									<div class="book_intro" key={book._Id}>
 										<div class="image">
-										<img src={book.image}/>
+										<img src={book.image} onError={() => handleImgError(index)} />
 										</div>
 										<div class="alltext">
 										  <div class="book_text">

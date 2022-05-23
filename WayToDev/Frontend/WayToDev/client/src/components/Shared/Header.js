@@ -66,9 +66,9 @@ function Header() {
 						<li>
 							<Link to="/books">Books</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link to="/contacts">Contacts</Link>
-						</li>
+						</li> */}
 						{userData.access_token !== '' ? (
 							<li>
 								<Link to="/profile">

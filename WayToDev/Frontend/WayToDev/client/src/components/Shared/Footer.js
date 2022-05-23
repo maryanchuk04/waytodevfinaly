@@ -21,15 +21,15 @@ function Footer() {
         <h5 class = "headin5_amrc col_white_amrc pt2" > Quick links </h5>
 
         <ul class = "footer_ul_amrc" >
-        <li > < a href = "http://localhost:3000/login" > Sign - Up </a></li >
-        <li > <LinkScroll to = "aboutlang"
+        <li > < Link to = "/login" > Sign - Up </Link></li >
+        {/* <li > <LinkScroll to = "aboutlang"
         className = "scrollDown"
         spy = { true }
         offset = {-50 }
         smooth = { true }
         duration = { 500 } >
         Subscribe to us 
-        </LinkScroll></li >
+        </LinkScroll></li > */}
         <li> < Link to = "/books" > Books </Link></li >
         </ul>
         </div>
@@ -37,23 +37,19 @@ function Footer() {
         <div class = " col-sm-4 col-md  col-6 col" >
         <h5 class = "headin5_amrc col_white_amrc pt2  footer_ul_h" > Quick links </h5> 
         <ul class = "footer_ul_amrc footer_ul_link2" >
-        <li > < LinkScroll to = "courses"
-        className = "scrollDown"
-        spy = { true }
-        offset = {-21 }
-        smooth = { true }
-        duration = { 500 } >
+        <li > < Link to = "/courses"
+        className = "scrollDown" >
         Courses 
-        </LinkScroll></li >
+        </Link></li >
         <li > <Link to= "/profile" > Profile </Link></li >
-        <li > < LinkScroll to = "aboutlang"
+        {/* <li > < LinkScroll to = "aboutlang"
         className = "scrollDown"
         spy = { true }
         offset = {-50 }
         smooth = { true }
         duration = { 500 } >
         Send a feedback 
-        </LinkScroll></li >
+        </LinkScroll></li > */}
         </ul>
 
         </div>
@@ -78,16 +74,16 @@ function Footer() {
         <li > <Link to = "/posts" > IT ARTICLES </Link></li >
         <li > <Link to  = "/courses" > COURSES </Link></li >
         <li > <Link to = "/books" > BOOKS </Link></li >
-        <li > <Link to = "/contacts" > CONTACTS </Link></li >
+        {/* <li > <Link to = "/contacts" > CONTACTS </Link></li > */}
         </ul>
 
-        <p class = "text-center" > WayToDev @2021 | Designed With by < a href = "/" > WayToDev </a></p >
+        <p class = "text-center" > WayToDev @2021 | Designed With by < Link to = "/" > WayToDev </Link></p >
 
         <ul class = "social_footer_ul" >
-        <li > < a href = "https://www.facebook.com/" target="_blank " > < i class = "fab fa-facebook-f" > </i></a > </li> 
-        <li > < a href = "https://twitter.com/" target="_blank " > < i class = "fab fa-twitter" > </i></a > </li> 
-        <li > < a href = "https://www.linkedin.com/" target="_blank " > < i class = "fab fa-linkedin" > </i></a > </li> 
-        <li > < a href = "https://www.instagram.com/" target="_blank " > < i class = "fab fa-instagram" > </i></a > </li> 
+        <li > < a href = "https://www.facebook.com/profile.php?id=100074416986513" target="_blank " > < i class = "fab fa-facebook-f" > </i></a > </li> 
+        <li > < a href = "https://twitter.com/SDvoryannikov" target="_blank " > < i class = "fab fa-twitter" > </i></a > </li> 
+        <li > < a href = "https://www.linkedin.com/in/serhiy-dvoryannikov-83559a207/" target="_blank " > < i class = "fab fa-linkedin" > </i></a > </li> 
+        <li > < a href = "https://www.instagram.com/dvoriannikovsergii/" target="_blank " > < i class = "fab fa-instagram" > </i></a > </li> 
         </ul>
 
         </div>

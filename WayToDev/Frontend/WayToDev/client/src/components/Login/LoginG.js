@@ -12,9 +12,11 @@ function LoginG() {
 	const responseGoogle = (response) => {
 		console.log(response);
 		console.log(response.profileObj);
-
+		// TODO:
+		// fix google login/signup
+		// cross origin errors
 		axios
-			.post('http://waytodev.somee.com/user/registr', {
+			.post('https://bsite.net/waytodev/user/GoogleLogin', {
 				Name: response.profileObj.givenName,
 				Email: response.profileObj.email,
 				picture: response.profileObj.imageUrl,
@@ -23,18 +25,20 @@ function LoginG() {
 				console.log(result);
 				axios
 					.get(
-						`http://waytodev.somee.com/user/${result.data.user_id}`
+						`https://bsite.net/waytodev/user/${result.data.user._Id}`
 					)
 					.then((data) => {
 						console.log(data);
 						dispatch(
 							setUser({
-								_Id: result.data.user_id,
-								email: response.profileObj.email,
+								_Id: result.data?.user?._Id,
+								email: data?.data?.email || "",
 								password: null,
 								access_token: result.data.access_token,
-								picture: data.data.picture,
-								name: response.profileObj.givenName,
+								picture: data?.data?.picture || "",
+								name: data?.data?.name || "",
+								phone: data?.data?.phone || "",
+								address: data?.data?.address || "",
 							})
 						);
 						navigate('/profile');

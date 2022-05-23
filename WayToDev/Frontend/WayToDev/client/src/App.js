@@ -15,7 +15,7 @@ import Login from './components/Login/Login.js';
 import Contacts from './components/Contacts/Contacts.js';
 import Languages from './components/Languages/Languages.js';
 import Profile from './components/Profile/Profile.js';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import FoundError from './components/Shared/FoundError';
 import AuthError from './components/Shared/Error';
 
@@ -38,7 +38,7 @@ function App() {
 									<AboutLang />
 								</React.Fragment>
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
 					/>
@@ -50,7 +50,7 @@ function App() {
 							localStorage.getItem('userInfo') !== null ? (
 								<PostsPage />
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
 					/>
@@ -62,7 +62,7 @@ function App() {
 							localStorage.getItem('userInfo') !== null ? (
 								<PostPage />
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
 					/>
@@ -74,7 +74,7 @@ function App() {
 							localStorage.getItem('userInfo') !== null ? (
 								<CoursesPage />
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
 					/>
@@ -86,24 +86,24 @@ function App() {
 							localStorage.getItem('userInfo') !== null ? (
 								<BooksPage />
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
 					/>
 
 					<Route path="/login" exact element={<Login />} />
 
-					<Route
+					{/* <Route
 						path="/contacts"
 						exact
 						element={
 							localStorage.getItem('userInfo') !== null ? (
 								<Contacts />
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
-					/>
+					/> */}
 
 					<Route
 						path="/languages"
@@ -112,7 +112,7 @@ function App() {
 							localStorage.getItem('userInfo') !== null ? (
 								<Languages />
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
 					/>
@@ -124,7 +124,7 @@ function App() {
 							localStorage.getItem('userInfo') !== null ? (
 								<Profile />
 							) : (
-								<AuthError />
+								<Navigate replace to="/login" />
 							)
 						}
 					/>

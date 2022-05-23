@@ -69,6 +69,13 @@
 	margin: 20px;
 	height: 130px;
 	width: 130px;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.profile .main-body i {
+	font-size: 130px;
+	cursor: pointer;
 }
 
 .profile .main-body .btn-primary {

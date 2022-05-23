@@ -81,14 +81,14 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://www.facebook.com/"
+											href="https://www.facebook.com/profile.php?id=100074416986513/"
 											target="_blank"
 											rel="noreferrer">
 											<i class="fab fa-facebook-f"></i>
 										</a>
 									</div>
 									<a
-										href="https://www.facebook.com/"
+										href="https://www.facebook.com/profile.php?id=100074416986513"
 										target="_blank"
 										rel="noreferrer">
 										<span class="icon_btn">Facebook</span>
@@ -97,7 +97,7 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://twitter.com/"
+											href="https://twitter.com/SDvoryannikov/"
 											target="_blank "
 											rel="noreferrer">
 											{" "}
@@ -105,7 +105,7 @@ function Social() {
 										</a>
 									</div>
 									<a
-										href="https://twitter.com/"
+										href="https://twitter.com/SDvoryannikov/"
 										target="_blank "
 										rel="noreferrer">
 										<span>Twitter</span>
@@ -114,20 +114,20 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://www.instagram.com/"
+											href="https://www.instagram.com/dvoriannikovsergii/"
 											target="_blank"
 											rel="noreferrer">
 											<i class="fab fa-instagram"></i>
 										</a>
 									</div>
 									<a
-										href="https://www.instagram.com/"
+										href="https://www.instagram.com/dvoriannikovsergii/"
 										target="_blank"
 										rel="noreferrer">
 										<span>Instagram</span>
 									</a>
 								</div>
-								<div class="button">
+								{/* <div class="button">
 									<div class="icon">
 										<a
 											href="https://web.telegram.org/z/"
@@ -142,18 +142,18 @@ function Social() {
 										rel="noreferrer">
 										<span>Telegram</span>
 									</a>
-								</div>
+								</div> */}
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://www.youtube.com/"
+											href="https://www.youtube.com/channel/UCM33H0b6mEgMHhscQCmCJ5Q"
 											target="_blank"
 											rel="noreferrer">
 											<i class="fab fa-youtube"></i>
 										</a>
 									</div>
 									<a
-										href="https://www.youtube.com/"
+										href="https://www.youtube.com/channel/UCM33H0b6mEgMHhscQCmCJ5Q"
 										target="_blank"
 										rel="noreferrer">
 										<span>YouTube</span>
@@ -162,14 +162,14 @@ function Social() {
 								<div class="button">
 									<div class="icon">
 										<a
-											href="https://github.com/"
+											href="https://github.com/Serhiy-dotcom"
 											target="_blank"
 											rel="noreferrer">
 											<i class="fab fa-github"></i>
 										</a>
 									</div>
 									<a
-										href="https://github.com/"
+										href="https://github.com/Serhiy-dotcom"
 										target="_blank"
 										rel="noreferrer">
 										<span>GitHub</span>
@@ -178,7 +178,7 @@ function Social() {
 							</div>
 						</div>
 					</div>
-					<div class="feedback">
+					{/* <div class="feedback">
 						<div class="rating-text">
 							<p>Rate our website</p>
 						</div>
@@ -278,7 +278,7 @@ function Social() {
 								</label>
 							</form>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

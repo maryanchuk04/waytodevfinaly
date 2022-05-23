@@ -26,7 +26,7 @@ function AllCourses() {
 	};
 
 	useEffect(() => {
-		axios.get('http://waytodev.somee.com/courses').then((result) => {
+		axios.get('https://bsite.net/waytodev/courses').then((result) => {
 			console.log(result.data);
 			setCourses(result.data);
 		});
