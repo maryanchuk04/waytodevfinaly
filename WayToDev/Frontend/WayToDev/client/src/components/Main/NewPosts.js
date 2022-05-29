@@ -56,15 +56,6 @@ function NewPosts() {
 						)}
 					</section>
 				</div>
-				<LinkScroll
-					to="aboutlang"
-					className="scrollDown"
-					spy={true}
-					smooth={true}
-					offset={-80}
-					duration={500}>
-					<span></span>
-				</LinkScroll>
 			</div>
 		</div>
 	);

@@ -72,12 +72,12 @@ function Header() {
 						{userData.access_token !== '' ? (
 							<li>
 								<Link to="/profile">
-									{userData.picture === null ? (
+									{!userData.picture  ? (
 										<i class="fas fa-user-circle"></i>
 									) : (
 										<img
 											src={userData.picture}
-											alt={userData.name}
+											alt=""
 										/>
 									)}
 								</Link>

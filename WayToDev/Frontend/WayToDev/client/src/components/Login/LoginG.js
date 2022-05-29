@@ -38,7 +38,7 @@ function LoginG() {
 								picture: data?.data?.picture || "",
 								name: data?.data?.name || "",
 								phone: data?.data?.phone || "",
-								address: data?.data?.address || "",
+								adress: data?.data?.adress || "",
 							})
 						);
 						window.location = '/profile';

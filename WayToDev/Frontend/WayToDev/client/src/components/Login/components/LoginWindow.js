@@ -43,16 +43,17 @@ function LoginWindow() {
 						console.log(data);
 						dispatch(
 							setUser({
-								_Id: result.data.user_id,
-								email: signInData.email,
-								password: signInData.password,
+								_Id: data?.data?._Id,
+								email: data?.data?.email || "",
+								password: data?.data?.password || "",
 								access_token: result.data.access_token,
-								picture: data.data.picture,
-								name: data?.data?.name,
+								picture: data?.data?.picture || "",
+								name: data?.data?.name || "",
+								adress: data?.data?.adress || "",
+								phone: data?.data?.phone || "",
 							})
 						);
-						navigate('/profile');
-						window.location.reload();
+						window.location = '/profile';
 					})
 					.catch((err) => {
 						console.log(err);
@@ -84,16 +85,17 @@ function LoginWindow() {
 						console.log(data);
 						dispatch(
 							setUser({
-								_Id: result.data.user_id,
-								email: signUpData.email,
-								password: signUpData.password,
+								_Id: data?.data?._Id,
+								email: data?.data?.email || "",
+								password: data?.data?.password || "",
 								access_token: result.data.access_token,
-								picture: data.data.picture,
-								name: signUpData.name,
+								picture: data?.data?.picture || "",
+								name: data?.data?.name || "",
+								phone: data?.data?.phone || "",
+								adress: data?.data?.adress || "",
 							})
 						);
-						navigate('/profile');
-						window.location.reload();
+						window.location = '/profile';
 					})
 					.catch((err) => {
 						console.log(err);

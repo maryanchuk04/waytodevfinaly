@@ -33,15 +33,6 @@ function AboutLang() {
 						READ MORE
 					</LinkRouter>
 				</div>
-				<Link
-					to="myBaner"
-					className="scrollDown reverse"
-					offset={-95}
-					spy={true}
-					smooth={true}
-					duration={500}>
-					<span></span>
-				</Link>
 			</div>
 		</div>
 	);

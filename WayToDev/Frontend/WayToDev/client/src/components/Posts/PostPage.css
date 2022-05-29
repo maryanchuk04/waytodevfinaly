@@ -94,6 +94,13 @@
     margin-right: 30px;
 }
 
+.commentsContainer i {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    font-size: 52px;
+}
+
 .commentsContainer .commentInfo {
     width: fit-content;
     display: flex;

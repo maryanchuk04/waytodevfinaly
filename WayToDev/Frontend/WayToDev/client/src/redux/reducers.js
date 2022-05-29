@@ -9,7 +9,7 @@ let initState = JSON.parse(localStorage.getItem("userInfo")) || {
 	favourites: null,
 	access_token: "",
 	phone: "",
-	address: "",
+	adress: "",
 };
 
 console.log(localStorage.getItem("userInfo"));

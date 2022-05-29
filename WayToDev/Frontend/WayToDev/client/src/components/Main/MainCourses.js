@@ -73,16 +73,6 @@ function MainCourses() {
 									)
 							)}
 						</div>
-
-						<Link
-							to="posts"
-							className="scrollDown"
-							spy={true}
-							smooth={true}
-							offset={-80}
-							duration={500}>
-							<span></span>
-						</Link>
 					</div>
 				</div>
 			</div>

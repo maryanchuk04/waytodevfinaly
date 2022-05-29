@@ -114,10 +114,14 @@ function PostPage() {
 			<div className="commentsContainer">
 				{postInfo?.comment?.map((comment) => (
 					<div className="comment">
-						<img
-							src={comment?.user?.picture}
-							alt={`${comment?.user?.name}'s picture`}
-						/>
+						{comment?.user?.picture ?
+							(
+								<img
+									src={comment?.user?.picture}
+									alt={`${comment?.user?.name}'s picture`}
+								/>
+							) : <i class="fas fa-user-circle"></i>
+						}
 						<div className="commentInfo">
 							<h5>{comment?.user?.name}</h5>
 							{comment.text}
